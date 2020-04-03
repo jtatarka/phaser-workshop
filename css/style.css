@@ -1,0 +1,76 @@
+/* Google Fonts from https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+body {
+  background-color: rgba(77, 187, 192, 0.2);
+  color: #736658;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 5px 25px;
+}
+
+img {
+  max-width: 65vw;
+}
+
+h1, h2, h3 {
+  font-family: "Comfortaa", serif;
+}
+
+a {
+  color: #EF659E; 
+}
+
+pre code {
+  font-size: 14px;
+}
+
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1250px;
+  width: 65vw;
+}
+
+.section {
+  clear: both;
+  display: block;
+}
+
+.logo {
+  display: block;
+  margin-top: 1em;
+  max-width: 400px;
+  width: 50vw;
+}
+
+.icon {
+  float: right;
+  width: 200px;
+}
+
+/* Helper classes */
+.centered {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.pink {
+  color: #EF659E;
+}
+
+.mint {
+  color: #4DBBC0;
+}
+
+.brown {
+  color: #736658;
+}
