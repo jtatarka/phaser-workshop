@@ -280,7 +280,7 @@ ground.body.immovable = true;</code></pre>
         the viewport, and the other on the left. When finished you'll have a world in which your character can move
         around.</p>
       <div class="centered">
-        <img src="assets/part4.png">
+        <img src="assets/step3.png">
       </div>
       <h3>Step 4 - Sprite Sheets</h3>
       <p>Our sprite sheet from Step 2 was loaded with a different method because sprite sheets are not images. They
@@ -326,7 +326,7 @@ player.animations.add('right', [ ... ], 10, true);</code></pre>
         the local gravity, or how fast he'll fall. <code>300</code> is an arbitrary number, but the higher this value,
         the faster he'll come down while jumping or falling from <code>platforms</code>.</p>
       <div class="centered">
-        <img src="assets/part5-1.png">
+        <img src="assets/step4-1.png">
       </div>
       <p>But you might have noticed that when he falls he's not landing on the ground, but rather on the edge of the
         world. Try commenting out the line with <code>collideWorldBounds</code> and see what happens to our
@@ -344,7 +344,7 @@ player.animations.add('right', [ ... ], 10, true);</code></pre>
         stop them from overlapping, and this is how we can get the <code>dude</code> to land on the ground and ledges
         without falling to the bottom of the game world.</p>
       <div class="centered">
-        <img src="assets/part5-2.png">
+        <img src="assets/step4-2.png">
       </div>
       <h3>Step 6 - Keyboard Controls</h3>
       <p>Great, now our <code>dude</code> is able to land correctly, but he also can't yet move, so let's fix that! One
@@ -405,7 +405,7 @@ function create() {
       <p>The second and third checks here make sure that he is touching one of the platforms, as we (probably) don't
         want him to get an extra boost when he's already jumping or on top of some other object.</p>
       <div class="centered">
-        <img src="assets/part7.png">
+        <img src="assets/step6.png">
       </div>
       <h3>Step 7 - Collecting Stars</h3>
       <p>Mr. <code>'dude'</code> seems a little lonely, doesn't he? Let's give him a purpose! We'll drop some stars into
@@ -455,7 +455,7 @@ function create() {
       <p>A note about the parameters here: Phaser is smart enough to automatically send them to our callback function
         since it knows we're checking if the <code>player</code> and <code>star</code> have overlapped.</p>
       <div class="centered">
-        <img src="assets/part8.png">
+        <img src="assets/step7.png">
       </div>
       <h3>Step 8 - Keeping Score</h3>
       <p>So now we have a fully functional game, but let's take it one set further and keep score based on how many
@@ -484,7 +484,7 @@ var scoreText;</code></pre>
       <p>And there you have it, a fully functional Phaser game! Test it out and make sure your score is correctly
         incremented with each <code>star</code> that you collect.</p>
       <div class="centered">
-        <img src="assets/part9.png">
+        <img src="assets/step8.png">
       </div>
     </div>
 
