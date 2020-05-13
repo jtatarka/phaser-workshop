@@ -1,6 +1,6 @@
 /* Google Fonts from https://fonts.google.com */
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700');
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 
 body {
   background-color: rgba(77, 187, 192, 0.2);
@@ -15,12 +15,14 @@ img {
   max-width: 65vw;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Comfortaa", serif;
 }
 
 a {
-  color: #EF659E; 
+  color: #ef659e;
 }
 
 pre code {
@@ -64,11 +66,11 @@ pre code {
 }
 
 .pink {
-  color: #EF659E;
+  color: #ef659e;
 }
 
 .mint {
-  color: #4DBBC0;
+  color: #4dbbc0;
 }
 
 .brown {
