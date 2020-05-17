@@ -1,106 +1,185 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>ChickTech Phaser Workshop</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
 
-<head>
-  <title>ChickTech Phaser Workshop</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="assets/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-</head>
+  <body>
+    <img class="centered logo" src="assets/logo.svg" />
+    <h1 class="centered pink">Video Game Design using Phaser</h1>
 
-<body>
-  <img class="centered logo" src="assets/logo.svg">
-  <h1 class="centered pink">Put Your Game Face On</h1>
-
-  <div class="container">
-    <div class="section">
-      <h2 class="mint">Introduction</h2>
-      <ol>
-        <li><span class="bold">Phaser</span></li>
-        <img class="icon" src="assets/phaser.png">
-        <p>From its <a href="http://phaser.io" target="_blank">Web site</a>, "Phaser is a fun, free and fast 2D game
-          framework for making HTML5 games for desktop and mobile web browsers, supporting Canvas and WebGL rendering."
-        </p>
-        <p>In other words, Phaser is a toolbox that developers can use to create all kinds of online games. It provides
-          a starting point so that we can begin designing and building without having to write a lot of foundational
-          code.</p>
-        <li><span class="bold">HTML5</span></li>
-        <p>HTML (HyperText Markup Language) is the most basic building block of the Web. Using tags, HTML specifies the
-          content and structure of a webpage which web browsers use to render its substance.</p>
-        <p>HTML5 is the latest standard that defines HTML which aims to allow developers to create more advanced Web
-          sites. Phaser exploits the HTML5 <code>&lt;canvas&gt;</code> tag to create images to be used for online games.
-        </p>
-        <li><span class="bold">CSS</span></li>
-        <p>CSS (Cascading Style Sheets) is used to style Web pages. Rather than focusing on content like HTML, CSS
-          specifies how a Web page should look using various definitions which are applied using selectors.</p>
-        <p>We won't be using CSS heavily in this workshop, however its good to know for context.</p>
-        <li><span class="bold">JavaScript</span></li>
-        <p>JavaScript is the de facto scripting language of Web pages. Though lightweight, it is extremely powerful and
-          capable of controlling the behavior of Web pages or running many non-browser environments.</p>
-        <p>We'll be programming our games in this workshop using JavaScript and the Phaser framework.</p>
-      </ol>
-    </div>
-
-    <div class="section">
-      <h2 class="mint">Working with Thimble</h2>
-      <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Mozilla_Thimble_logo.png">
-      <p>Thimble is an online editor created by Mozilla which can be used to learn HTML, CSS, and JS. We'll use Thimble
-        to create and host our Phaser games within the Cloud (meaning it's available from any computer with no need to
-        install any software) for free.</p>
-      <h3>Creating an Account</h3>
-      <p>Follow these directions to get setup with a Thimble account of your own:</p>
-      <ol>
-        <li>First, go to <a href="https://thimble.mozilla.org" target="_blank">thimble.mozilla.org</a> and click on
-          "Create an
-          account".</li>
-        <li>Enter your desired username, a valid email address, and a password.</li>
-        <li>Create a new project and get started with help from the default template, or remix <a
-            href="https://thimbleprojects.org/jtatarka/481862" target="_blank">this project</a> which includes the
-          boilerplate
-          code needed to start a new Phaser 2 game.</li>
-      </ol>
-      <h3>Remixing</h3>
-      <p>Thimble allows you to remix any project that is published on thimbleprojects.org. This means you can take a
-        copy of the code, edit it within your own account, and republish a new version of the same application. To remix
-        a project, just click on the "Remix" button from any Thimble site.</p>
-      <div class="centered">
-        <img src="assets/remix.png">
+    <div class="container">
+      <div class="section">
+        <h2 class="mint">Introduction</h2>
+        <ol>
+          <li><span class="bold">Phaser</span></li>
+          <img class="icon" src="assets/phaser.png" />
+          <p>
+            From its <a href="http://phaser.io" target="_blank">Web site</a>,
+            "Phaser is a fun, free and fast 2D game framework for making HTML5
+            games for desktop and mobile web browsers, supporting Canvas and
+            WebGL rendering."
+          </p>
+          <p>
+            In other words, Phaser is a toolbox that developers can use to
+            create all kinds of online games. It provides a starting point so
+            that we can begin designing and building without having to write a
+            lot of foundational code.
+          </p>
+          <li><span class="bold">HTML5</span></li>
+          <p>
+            HTML (HyperText Markup Language) is the most basic building block of
+            the Web. Using tags, HTML specifies the content and structure of a
+            webpage which web browsers use to render its substance.
+          </p>
+          <p>
+            HTML5 is the latest standard that defines HTML which aims to allow
+            developers to create more advanced Web sites. Phaser exploits the
+            HTML5 <code>&lt;canvas&gt;</code> tag to create images to be used
+            for online games.
+          </p>
+          <li><span class="bold">CSS</span></li>
+          <p>
+            CSS (Cascading Style Sheets) is used to style Web pages. Rather than
+            focusing on content like HTML, CSS specifies how a Web page should
+            look using various definitions which are applied using selectors.
+          </p>
+          <p>
+            We won't be using CSS heavily in this workshop, however its good to
+            know for context.
+          </p>
+          <li><span class="bold">JavaScript</span></li>
+          <p>
+            JavaScript is the de facto scripting language of Web pages. Though
+            lightweight, it is extremely powerful and capable of controlling the
+            behavior of Web pages or running many non-browser environments.
+          </p>
+          <p>
+            We'll be programming our games in this workshop using JavaScript and
+            the Phaser framework.
+          </p>
+        </ol>
       </div>
-      <h3>Publishing</h3>
-      <p>When you're ready to share your work, from any Thimble project's editor, click on "Publish" in the upper
-        right-hand corner. Enter a brief description of your project, then click on "Publish" again and your application
-        will be created and hosted. Once completed, you'll be presented with a link that you can share with family and
-        friends.</p>
-      <h3>Previewing</h3>
-      <p>When working on a site using Thimble it may or may not be useful to have the preview auto refresh. When working
-        directly with HTML and CSS this works really well, however with some JS applications, such as ones made with
-        Phaser, it might be better to manually refresh after you've completed a method or other update. You can toggle
-        between these two modes by checking or unchecking "AUTO" at the top of the editor.</p>
-      <h3>Debugging</h3>
-      <p>As with any coding project, you're bound to run into some issues and bugs while you're developing your Phaser
-        game. Luckily, Phaser has console logging which helps us identify issues in code, and Thimble has a built in
-        console to display these messages when using the editor. You can reveal it at anytime by clicking on the console
-        icon at the bottom right of the preview panel.</p>
-      <p>For more advanced debugging, you can use Chrome's Developer Tools (press <code>F12</code> to open, then click
-        on the Sources tab). Dev Tools lets you set breakpoints in your code and watch variables at different times
-        during code execution to help identify, troubleshoot, and fix bugs.</p>
-    </div>
 
-    <div calss="section">
-      <h2 class="mint">A Bit More Detail</h2>
-      <p>Although Phaser makes it easy for us to jump right in and get started with building online games, there is a
-        little bit of setup required. First, we need to create a basic HTML page for our game to live in, maybe set a
-        few basic styles, and definitely import the Phaser library, which is packaged up nicely in a
-        <code>.min.js</code> file.</p>
-      <p>After remixing the boilerplate project, you'll see the basic HTML structure for our application in
-        <code>index.html</code>. HTML is uses tags to organize the content of a Web page, and a barebones page will be
-        formatted like this:</p>
-      <pre><code class="hljs html">&lt;html&gt;
+      <div class="section">
+        <h2 class="mint">Working with Glitch</h2>
+        <img
+          class="icon"
+          src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Flogo-day.svg"
+        />
+        <p>
+          Glitch is an online coding environment which can be used to learn
+          HTML, CSS, and JS. We'll use Glitch to create and host our Phaser
+          games within the Cloud (meaning it's available from any computer with
+          no need to install any software) for free.
+        </p>
+        <h3>Creating an Account</h3>
+        <p>
+          Follow these directions to get setup with a Glitch account of your
+          own:
+        </p>
+        <ol>
+          <li>
+            First, go to
+            <a href="https://glitch.com/signin" target="_blank"
+              >glitch.com/signin</a
+            >
+            and click on "Create an account".
+          </li>
+          <li>
+            Select your desired method to signup; you can use your Facebook,
+            GitHub, or Google account, or any basic email.
+          </li>
+          <li>
+            Create a new project and get started with help from one of the
+            default templates, or remix
+            <a href="https://phaser-workshop.glitch.me/" target="_blank"
+              >this project</a
+            >
+            which includes the boilerplate code needed to start a new Phaser 2
+            game.
+          </li>
+        </ol>
+        <h3>Remixing</h3>
+        <p>
+          Glitch allows you to remix any project that is published on glitch.me.
+          This means you can take a copy of the code, edit it within your own
+          account, and republish a new version of the same application. To remix
+          a project, just click on the Glitch logo from any glitch.me app, and
+          select "Remix on Glitch".
+        </p>
+        <p>
+          You can also browse projects on Glitch (<a
+            href="https://glitch.com/@glitch"
+            >start here</a
+          >) and look for the "Remix Your Own" button on any one you like.
+        </p>
+        <h3>Previewing</h3>
+        <p>
+          When working on code in the editor, your application will
+          automatically refresh. You can view your changes in realtime by
+          clicking the "Show" button at the top left next to your app's title.
+          This will give you the option to see your preview next to your code,
+          or in a new window or tab.
+        </p>
+        <h3>Sharing</h3>
+        <p>
+          When you're ready to share your work, from any Glitch project's
+          editor, click on "Share" in the upper left-hand corner next to your
+          avatar. In the first section, Link to Glitch, you'll find links to the
+          Project Page, Live App, and Code.
+        </p>
+        <h3>Debugging</h3>
+        <p>
+          As with any coding project, you're bound to run into some issues and
+          bugs while you're developing your Phaser game. Luckily, Phaser has
+          console logging which helps us identify issues in code, and Glitch
+          has a built in console to display these messages when using the
+          editor. You can reveal it at anytime by clicking on the "Tools" button
+          at the bottom right of the preview panel, then selecting "Logs".
+        </p>
+        <p>
+          For more advanced debugging, you can use Chrome's Developer Tools
+          (press <code>F12</code> or <code>CTRL + SHIFT + I</code></cdoe>to open, then click on the Sources tab). Dev
+          Tools lets you set breakpoints in your code and watch variables at
+          different times during code execution to help identify, troubleshoot,
+          and fix bugs.
+        </p>
+        <p>
+          It's easiest to do this when your game is in a new tab but either way is possible; just look for
+          <code>game.js</code> in the file explorer. You can manually browse through the files, or by pressing
+          <code>CTRL + P</code>, then typing <code>game.js</code>, which will take you stright there.
+        </p>
+      </div>
+
+      <div calss="section">
+        <h2 class="mint">A Bit More Detail</h2>
+        <p>
+          Although Phaser makes it easy for us to jump right in and get started
+          with building online games, there is a little bit of setup required.
+          First, we need to create a basic HTML page for our game to live in,
+          maybe set a few basic styles, and definitely import the Phaser
+          library, which is packaged up nicely in a <code>.min.js</code> file.
+        </p>
+        <p>
+          After remixing the boilerplate project, you'll see the basic HTML
+          structure for our application in <code>index.html</code>. HTML is uses
+          tags to organize the content of a Web page, and a barebones page will
+          be formatted like this:
+        </p>
+        <pre><code class="hljs html">&lt;html&gt;
 
   &lt;head&gt;
     &lt;!-- Header content goes here including metadata, CSS and JS imports --&gt;
@@ -115,82 +194,145 @@
   &lt;/body&gt;
 
 &lt;/html&gt;</code></pre>
-      <p>The <code>&lt;head&gt;</code> above includes a <code>script</code> tag to import <code>phaser.min.js</code> and
-        a <code>link</code> to connect our CSS file. You might notice that all of the tags above have an associated tag
-        of the same type with a <code>/</code> before it to close out that block of code, except for <code>link</code>.
-        Most tags in HTML require both an opening and closing tag, though not all do, and those are known as
-        self-closing.</p>
-      <p>The <code>link</code>ed <code>styles.css</code> includes all of our CSS rules which the browser will use to
-        style our page. Take a look at this file and you'll see this:</p>
-      <pre><code class="hljs css">body {
+        <p>
+          The <code>&lt;head&gt;</code> above includes a <code>script</code> tag
+          to import <code>phaser.min.js</code> and a <code>link</code> to
+          connect our CSS file. You might notice that all of the tags above have
+          an associated tag of the same type with a <code>/</code> before it to
+          close out that block of code, except for <code>link</code>. Most tags
+          in HTML require both an opening and closing tag, though not all do,
+          and those are known as self-closing.
+        </p>
+        <p>
+          The <code>link</code>ed <code>styles.css</code> includes all of our
+          CSS rules which the browser will use to style our page. Take a look at
+          this file and you'll see this:
+        </p>
+        <pre><code class="hljs css">body {
   margin: 0;
 }</code></pre>
-      <p>All CSS rules are formatted like this. First we have a selector, in this case <code>body</code> and then any
-        number of styles to be applied to the elements in our HTML file which match the selector. In this case a
-        <code>margin</code> of <code>0</code> will be applied to our entire page.</p>
-      <p>This selector selects on a particular element directly, but we can also match <code>id</code>s and
-        <code>class</code>es. Any one HTML page should only have one of any given unique <code>id</code>, but may have
-        any number of elements with a given <code>class</code> applied. For example, look at this HTML snippit:</p>
-      <pre><code class="hljs html">&lt;span id="welcome"&gt;Welcome to My Web Page!&lt;/span&gt;
+        <p>
+          All CSS rules are formatted like this. First we have a selector, in
+          this case <code>body</code> and then any number of styles to be
+          applied to the elements in our HTML file which match the selector. In
+          this case a <code>margin</code> of <code>0</code> will be applied to
+          our entire page.
+        </p>
+        <p>
+          This selector selects on a particular element directly, but we can
+          also match <code>id</code>s and <code>class</code>es. Any one HTML
+          page should only have one of any given unique <code>id</code>, but may
+          have any number of elements with a given <code>class</code> applied.
+          For example, look at this HTML snippit:
+        </p>
+        <pre><code class="hljs html">&lt;span id="welcome"&gt;Welcome to My Web Page!&lt;/span&gt;
 
 &lt;p class="orange"&gt;This is a paragraph with some information.&lt;/p&gt;</code></pre>
-      <p>To select the <code>id</code> we need to use a <code>#</code> before the name, and for <code>class</code>es we
-        use a <code>.</code> like this:</p>
-      <pre><code class="hljs css">#welcome {
+        <p>
+          To select the <code>id</code> we need to use a <code>#</code> before
+          the name, and for <code>class</code>es we use a <code>.</code> like
+          this:
+        </p>
+        <pre><code class="hljs css">#welcome {
   font-weight: bold;
 }
 
 .orange {
   color: orange;
 }</code></pre>
-      <p>But the boilerplate project sets all of this up for us and we won't be focused on either HTML or CSS for this
-        workshop. The important part is the Phaser library, which is written in JS. We'll be writing our own JS script
-        using Phaser's code to help us out.</p>
-      <p>JavaScript is technically a multi-paradigm language, meaning it can support different styles of coding. Often
-        JS libraries take an object oriented (OO) approach, and this includes Phaser. The Phaser library specifies many
-        different objects, or classes, each with their own variables and methods. Variables can also be described as
-        properties, and methods as functions. In the games we create we'll see lines of code like this:</p>
-      <pre><code class="hljs js">player.animations.add('left', [0, 1, 2, 3], 10, true);</code></pre>
-      <p>In this code, <code>player</code> is an object of type <code>Phaser.Sprite</code>, which has a property called
-        <code>animations</code>, which happens to be another object (nesting these two is called composition) of type
-        <code>Phaser.AnimationManager</code>. Then <code>Phaser.AnimationManager</code> has a method called
-        <code>.add()</code> which contains the logic to <code>add</code> an animation to the manager of the
-        <code>Sprite</code>. You can diferentiate properties from methods by looking for parentheses.</p>
-      <p>Any things within the parenteses of a method are called parameters, but note that some methods do no require
-        parameters. In the example above, <code>.add()</code> takes four parameters of various types, which are used
-        within the logic of the method. The first is a string (a collection of characters <em>strung</em> together, the
-        next an array (a data structure), then an integer, and finally a boolean (<code>true</code> or
-        <code>false</code>).</p>
-      <p>On a very high level, to make a Phaser game we'll first create a new <code>Phaser.Game</code> object, and then
-        fill in three of Phaser's essential methods: <code>.preload()</code>, <code>.create()</code>, and
-        <code>.update()</code>.</p>
-      <p>The <code>.preload()</code> function is used to load any assets the game needs, like images, before building
-        the entire game. Next, <code>.create()</code> creates the actual pieces of the game which will be displayed in
-        the viewport. Then finally, <code>.update()</code> is a loop which is called on repeat to rerender the screen.
-        We'll add interactions to this method and tell Phaser what we want the game to do when different things happen.
-      </p>
-      <p>You'll see each of these topics in more detail throughout the workshop. But one additional thing to note about
-        Phaser: it's on a coordinate plane that might be orientied differently than expected. The x-axis is positive in
-        the right (east) direction, and the y-axis is positive in the <em>downward (south)</em> direction.</p>
-    </div>
+        <p>
+          But the boilerplate project sets all of this up for us and we won't be
+          focused on either HTML or CSS for this workshop. The important part is
+          the Phaser library, which is written in JS. We'll be writing our own
+          JS script using Phaser's code to help us out.
+        </p>
+        <p>
+          JavaScript is technically a multi-paradigm language, meaning it can
+          support different styles of coding. Often JS libraries take an object
+          oriented (OO) approach, and this includes Phaser. The Phaser library
+          specifies many different objects, or classes, each with their own
+          variables and methods. Variables can also be described as properties,
+          and methods as functions. In the games we create we'll see lines of
+          code like this:
+        </p>
+        <pre><code class="hljs js">player.animations.add('left', [0, 1, 2, 3], 10, true);</code></pre>
+        <p>
+          In this code, <code>player</code> is an object of type
+          <code>Phaser.Sprite</code>, which has a property called
+          <code>animations</code>, which happens to be another object (nesting
+          these two is called composition) of type
+          <code>Phaser.AnimationManager</code>. Then
+          <code>Phaser.AnimationManager</code> has a method called
+          <code>.add()</code> which contains the logic to <code>add</code> an
+          animation to the manager of the <code>Sprite</code>. You can
+          diferentiate properties from methods by looking for parentheses.
+        </p>
+        <p>
+          Any things within the parenteses of a method are called parameters,
+          but note that some methods do no require parameters. In the example
+          above, <code>.add()</code> takes four parameters of various types,
+          which are used within the logic of the method. The first is a string
+          (a collection of characters <em>strung</em> together, the next an
+          array (a data structure), then an integer, and finally a boolean
+          (<code>true</code> or <code>false</code>).
+        </p>
+        <p>
+          On a very high level, to make a Phaser game we'll first create a new
+          <code>Phaser.Game</code> object, and then fill in three of Phaser's
+          essential methods: <code>.preload()</code>, <code>.create()</code>,
+          and <code>.update()</code>.
+        </p>
+        <p>
+          The <code>.preload()</code> function is used to load any assets the
+          game needs, like images, before building the entire game. Next,
+          <code>.create()</code> creates the actual pieces of the game which
+          will be displayed in the viewport. Then finally,
+          <code>.update()</code> is a loop which is called on repeat to rerender
+          the screen. We'll add interactions to this method and tell Phaser what
+          we want the game to do when different things happen.
+        </p>
+        <p>
+          You'll see each of these topics in more detail throughout the
+          workshop. But one additional thing to note about Phaser: it's on a
+          coordinate plane that might be orientied differently than expected.
+          The x-axis is positive in the right (east) direction, and the y-axis
+          is positive in the <em>downward (south)</em> direction.
+        </p>
+      </div>
 
-    <div class="section">
-      <h2 class="mint">Getting Started with Phaser</h2>
-      <p>To get started, we'll be follwing an adaptation of the official Phaser tutorial <a
-          href="http://phaser.io/tutorials/making-your-first-phaser-2-game" target="_blank">"Making your first Phaser
-          game"</a>, which is available directly from <a href="http://phaser.io" target="_blank">phaser.io</a>. Note
-        that we'll be using Phaser CE (Community Edition; also known as Phaser 2) for this workshop, but Phaser 3 has
-        recently been released and has the same tutorial for the new, completely rewritten framework available <a
-          href="http://phaser.io/tutorials/making-your-first-phaser-3-game" target="_blank">here</a>. It's still a work
-        in progress, however.</p>
-      <h3>Step 0 - Boilerplate</h3>
-      <p>All Phaser games start by creating an instance of the <code>Phaser.Game</code> object, typically called
-        <code>game</code> by convention. You can call this varible anything you'd like, but can you really think of a
-        better name for it?</p>
-      <p>Remix <a href="https://thimbleprojects.org/jtatarka/481862" target="_blank">this project</a>, or copy the code
-        below
-        into an existing Web page to get started with any new Phaser game.</p>
-      <pre><code class="hljs js">var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+      <div class="section">
+        <h2 class="mint">Getting Started with Phaser</h2>
+        <p>
+          To get started, we'll be follwing an adaptation of the official Phaser
+          tutorial
+          <a
+            href="http://phaser.io/tutorials/making-your-first-phaser-2-game"
+            target="_blank"
+            >"Making your first Phaser game"</a
+          >, which is available directly from
+          <a href="http://phaser.io" target="_blank">phaser.io</a>. Note that
+          we'll be using Phaser CE (Community Edition; also known as Phaser 2)
+          for this workshop, but Phaser 3 has recently been released and has the
+          same tutorial for the new, completely rewritten framework available
+          <a
+            href="http://phaser.io/tutorials/making-your-first-phaser-3-game"
+            target="_blank">here</a>.
+        </p>
+        <h3>Step 0 - Boilerplate</h3>
+        <p>
+          All Phaser games start by creating an instance of the
+          <code>Phaser.Game</code> object, typically called <code>game</code> by
+          convention. You can call this varible anything you'd like, but can you
+          really think of a better name for it?
+        </p>
+        <p>
+          Remix
+          <a href="https://phaser-workshop.glitch.me/" target="_blank"
+            >this project</a
+          >, or copy the code below into an existing Web page to get started
+          with any new Phaser game.
+        </p>
+        <pre><code class="hljs js">var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 
 function preload() {
 
@@ -203,24 +345,43 @@ function create() {
 function update() {
 
 }</code></pre>
-      <p>Line 1 creates this local variable called <code>game</code> and assigns the object to it for later use. The
-        <code>new</code> keyword creates a new object with the given parameters, which are the five variables inside the
-        parentheses.</p>
-      <p>The first two parameters are the width and height of your game. We're using <code>800</code> and
-        <code>600</code> by default, but you can create a game of any size you like.</p>
-      <p>The third parameter is the rendering context. It's a good idea to always use <code>Phaser.AUTO</code> as it
-        will determine which option is best for the user's system: either <code>Phaser.WEBGL</code> or
-        <code>Phaser.CANVAS</code>, which are the only other two valid choices for this parameter.</p>
-      <p>Next up is the element of the Web page in which your game will live. By specifying an empty string
-        (<code>''</code>) we'll append to the page's <code>&lt;body&gt;</code>. Finally, the fifth parameter is an
-        object which maps our references to Phaser's essential functions.</p>
-      <h3>Step 1 - Loading Assets</h3>
-      <p>The <code>preload()</code> function is automatically called by Phaser when the game starts. The application
-        will look to this function and load any assets, such as sprites and sprite sheets, which are defined within it.
-      </p>
-      <p>We will load our assets to our game using <code>game.load</code> and the <code>.image()</code> and
-        <code>.spritesheet()</code> methods, as appropriate for each type of asset:</p>
-      <pre><code class="hljs js">function preload() {
+        <p>
+          Line 1 creates this local variable called <code>game</code> and
+          assigns the object to it for later use. The <code>new</code> keyword
+          creates a new object with the given parameters, which are the five
+          variables inside the parentheses.
+        </p>
+        <p>
+          The first two parameters are the width and height of your game. We're
+          using <code>800</code> and <code>600</code> by default, but you can
+          create a game of any size you like.
+        </p>
+        <p>
+          The third parameter is the rendering context. It's a good idea to
+          always use <code>Phaser.AUTO</code> as it will determine which option
+          is best for the user's system: either <code>Phaser.WEBGL</code> or
+          <code>Phaser.CANVAS</code>, which are the only other two valid choices
+          for this parameter.
+        </p>
+        <p>
+          Next up is the element of the Web page in which your game will live.
+          By specifying an empty string (<code>''</code>) we'll append to the
+          page's <code>&lt;body&gt;</code>. Finally, the fifth parameter is an
+          object which maps our references to Phaser's essential functions.
+        </p>
+        <h3>Step 1 - Loading Assets</h3>
+        <p>
+          The <code>preload()</code> function is automatically called by Phaser
+          when the game starts. The application will look to this function and
+          load any assets, such as sprites and sprite sheets, which are defined
+          within it.
+        </p>
+        <p>
+          We will load our assets to our game using <code>game.load</code> and
+          the <code>.image()</code> and <code>.spritesheet()</code> methods, as
+          appropriate for each type of asset:
+        </p>
+        <pre><code class="hljs js">function preload() {
 
     game.load.image('sky', 'assets/sky.png');
     game.load.image('ground', 'assets/platform.png');
@@ -228,31 +389,54 @@ function update() {
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
 
 }</code></pre>
-      <p>The code above adds three images to our game and one spritesheet. The first two parameters specify the asset
-        key, used to identify the asset in subsequent lines of code, and the resource location.</p>
-      <p>After <code>load</code>ing the <code>'ground'</code>, add one more <code>image</code> named <code>'star'</code>
-        from the resource <code>'assets/star.png'</code>.</p>
-      <p>Note that <code>.spritesheet()</code> has two additional parameters: the width and height of each frame in the
-        sheet, plus an optional fifth parameter which will tell Phaser how many frame to use from the sheet if there are
-        any empty frames at the end.</p>
-      <h3>Step 2 - Create a Sprite</h3>
-      <p>Now that we've loaded some assets, let's turn them into a sprite so we can use them in our game. Sprites should
-        be <code>added</code> to the <code>create()</code> function of our application, and will look like this:</p>
-      <pre><code class="hljs js">function create() {
+        <p>
+          The code above adds three images to our game and one spritesheet. The
+          first two parameters specify the asset key, used to identify the asset
+          in subsequent lines of code, and the resource location.
+        </p>
+        <p>
+          After <code>load</code>ing the <code>'ground'</code>, add one more
+          <code>image</code> named <code>'star'</code> from the resource
+          <code>'assets/star.png'</code>.
+        </p>
+        <p>
+          Note that <code>.spritesheet()</code> has two additional parameters:
+          the width and height of each frame in the sheet, plus an optional
+          fifth parameter which will tell Phaser how many frame to use from the
+          sheet if there are any empty frames at the end.
+        </p>
+        <h3>Step 2 - Create a Sprite</h3>
+        <p>
+          Now that we've loaded some assets, let's turn them into a sprite so we
+          can use them in our game. Sprites should be <code>added</code> to the
+          <code>create()</code> function of our application, and will look like
+          this:
+        </p>
+        <pre><code class="hljs js">function create() {
         
   game.add.sprite(0, 0, 'sky');
   
 }</code></pre>
-      <p>Now you should have a nice gradient that will serve as the background for our game! Behind the scenes, Phaser
-        created a new <code>Phaser.Sprite</code> object and <code>add</code>ed it to the game world, where all the
-        objects will live.</p>
-      <h3>Step 3 - World Building</h3>
-      <p>The game world in Phaser is infinite and expands in all directions on a coordinate plane. The origin,
-        <code>(0, 0)</code>, is automatically placed at the upper left corner of a new game for reference. We'll add
-        some platforms to our newly created world that are character can run and jump on.</p>
-      <p>First, create a new variable called <code>platforms</code>. Then, within the <code>create()</code> functions
-        add in the Physics system and initialize a group which will contain the ground and two ledges:</p>
-      <pre><code class="hljs js">var platforms;
+        <p>
+          Now you should have a nice gradient that will serve as the background
+          for our game! Behind the scenes, Phaser created a new
+          <code>Phaser.Sprite</code> object and <code>add</code>ed it to the
+          game world, where all the objects will live.
+        </p>
+        <h3>Step 3 - World Building</h3>
+        <p>
+          The game world in Phaser is infinite and expands in all directions on
+          a coordinate plane. The origin, <code>(0, 0)</code>, is automatically
+          placed at the upper left corner of a new game for reference. We'll add
+          some platforms to our newly created world that are character can run
+          and jump on.
+        </p>
+        <p>
+          First, create a new variable called <code>platforms</code>. Then,
+          within the <code>create()</code> functions add in the Physics system
+          and initialize a group which will contain the ground and two ledges:
+        </p>
+        <pre><code class="hljs js">var platforms;
         
 function create() {
 
@@ -268,31 +452,48 @@ function create() {
   platforms.enableBody = true;
 
 }</code></pre>
-      <p>To create the ground and ledges, create new variables and use <code>platforms.create()</code> to add them to
-        the group in the correct position. Note that we can use <code>game.world.height</code> to get the height of the
-        game world, like this:</p>
-      <pre><code class="hljs js">var ground = platforms.create(0, game.world.height - 64, 'ground');
+        <p>
+          To create the ground and ledges, create new variables and use
+          <code>platforms.create()</code> to add them to the group in the
+          correct position. Note that we can use
+          <code>game.world.height</code> to get the height of the game world,
+          like this:
+        </p>
+        <pre><code class="hljs js">var ground = platforms.create(0, game.world.height - 64, 'ground');
 
 ground.scale.setTo(2, 2);
 
 ground.body.immovable = true;</code></pre>
-      <p>Following the same format, add two ledges to the <code>platforms</code> group. One should be on the right of
-        the viewport, and the other on the left. When finished you'll have a world in which your character can move
-        around.</p>
-      <div class="centered">
-        <img src="assets/step3.png">
-      </div>
-      <h3>Step 4 - Sprite Sheets</h3>
-      <p>Our sprite sheet from Step 2 was loaded with a different method because sprite sheets are not images. They
-        differ because a sprite sheet is made up of animation frames, not a single picture. If you didn't take a look at
-        the <code>'dude'</code> asset before, here's what he looks like:</p>
-      <div class="centered">
-        <img src="assets/dude.png">
-      </div>
-      <p>You'll notice that the sprite sheet has nine frames: one in the middle for when he's not moving and facing the
-        camera, and two sets of four frames to either side for when he's running to the left and right.</p>
-      <p>To add him to the game world, create a new variable called <code>player</code>, then reference this code:</p>
-      <pre><code class="hljs js">// Add the player and its settings
+        <p>
+          Following the same format, add two ledges to the
+          <code>platforms</code> group. One should be on the right of the
+          viewport, and the other on the left. When finished you'll have a world
+          in which your character can move around.
+        </p>
+        <div class="centered">
+          <img src="assets/step3.png" />
+        </div>
+        <h3>Step 4 - Sprite Sheets</h3>
+        <p>
+          Our sprite sheet from Step 2 was loaded with a different method
+          because sprite sheets are not images. They differ because a sprite
+          sheet is made up of animation frames, not a single picture. If you
+          didn't take a look at the <code>'dude'</code> asset before, here's
+          what he looks like:
+        </p>
+        <div class="centered">
+          <img src="assets/dude.png" />
+        </div>
+        <p>
+          You'll notice that the sprite sheet has nine frames: one in the middle
+          for when he's not moving and facing the camera, and two sets of four
+          frames to either side for when he's running to the left and right.
+        </p>
+        <p>
+          To add him to the game world, create a new variable called
+          <code>player</code>, then reference this code:
+        </p>
+        <pre><code class="hljs js">// Add the player and its settings
 player = game.add.sprite(32, game.world.height - 150, 'dude');
 
 // Enable physics on the player
@@ -306,51 +507,95 @@ player.body.collideWorldBounds = true;
 // Add two animations to get him walking to the left and right
 player.animations.add('left', [0, 1, 2, 3], 10, true);
 player.animations.add('right', [ ... ], 10, true);</code></pre>
-      <p>First, we'll add a sprite with three parameters. To see what these parameters are, take a look at the official
-        <a href="http://phaser.io/docs/2.2.2/Phaser.GameObjectFactory.html#sprite" target="_blank">Phaser
-          documentation</a>. Next, enable Arcade physics on the player and set the related properties:
-        <code>bounce</code>, <code>gravity</code>, and <code>collideWorldBounds</code>.</p>
-      <p>Finally, we'll add two animations which will make him move. The first one is completed for you, and the
-        parameters, in order, are: a <code>name</code> for the animation, the <code>frames</code> from the sprite sheet
-        to use in the animation, the desired <code>frameRate</code>, and a boolean which signifies that the animation
-        should be repeated on a <code>loop</code>. This method is also fully documented <a
-          href="http://phaser.io/docs/2.2.2/Phaser.AnimationManager.html#add" target="_blank">here</a>.</p>
-      <p>Can you complete the <code>'right'</code> animation with the correct <code>frames</code>?</p>
-      <h3>Step 5 - More on Physics</h3>
-      <p>We've already specified that our game will use the <code>Physics.ARCADE</code> system and enabled it on all of
-        our sprites and groups. For the <code>playforms</code> we used <code>enableBody</code>, and for our
-        <code>player</code> we <code>enable</code>d <code>arcade</code>, and doing so gave our objects an instance of <a
-          href="http://phaser.io/docs/2.2.2/Phaser.Physics.Arcade.Body.html"
-          target="_blank"><code>ArcadePhysics.Body</code></a>.</p>
-      <p>For example, when creating our player, we added the line <code>player.body.gravity.y = 300;</code>, which sets
-        the local gravity, or how fast he'll fall. <code>300</code> is an arbitrary number, but the higher this value,
-        the faster he'll come down while jumping or falling from <code>platforms</code>.</p>
-      <div class="centered">
-        <img src="assets/step5-1.png">
-      </div>
-      <p>But you might have noticed that when he falls he's not landing on the ground, but rather on the edge of the
-        world. Try commenting out the line with <code>collideWorldBounds</code> and see what happens to our
-        <code>dude</code>.</p>
-      <p><code>Physics.ARCADE</code> also allows us to check collisions of any body in the game world. Add back the line
-        we just commented out so he can't leave the frame, and then insert the following line into the
-        <code>update()</code> function:</p>
-      <pre><code class="hljs js">function update() {
+        <p>
+          First, we'll add a sprite with three parameters. To see what these
+          parameters are, take a look at the official
+          <a
+            href="http://phaser.io/docs/2.2.2/Phaser.GameObjectFactory.html#sprite"
+            target="_blank"
+            >Phaser documentation</a
+          >. Next, enable Arcade physics on the player and set the related
+          properties: <code>bounce</code>, <code>gravity</code>, and
+          <code>collideWorldBounds</code>.
+        </p>
+        <p>
+          Finally, we'll add two animations which will make him move. The first
+          one is completed for you, and the parameters, in order, are: a
+          <code>name</code> for the animation, the <code>frames</code> from the
+          sprite sheet to use in the animation, the desired
+          <code>frameRate</code>, and a boolean which signifies that the
+          animation should be repeated on a <code>loop</code>. This method is
+          also fully documented
+          <a
+            href="http://phaser.io/docs/2.2.2/Phaser.AnimationManager.html#add"
+            target="_blank"
+            >here</a
+          >.
+        </p>
+        <p>
+          Can you complete the <code>'right'</code> animation with the correct
+          <code>frames</code>?
+        </p>
+        <h3>Step 5 - More on Physics</h3>
+        <p>
+          We've already specified that our game will use the
+          <code>Physics.ARCADE</code> system and enabled it on all of our
+          sprites and groups. For the <code>playforms</code> we used
+          <code>enableBody</code>, and for our <code>player</code> we
+          <code>enable</code>d <code>arcade</code>, and doing so gave our
+          objects an instance of
+          <a
+            href="http://phaser.io/docs/2.2.2/Phaser.Physics.Arcade.Body.html"
+            target="_blank"
+            ><code>ArcadePhysics.Body</code></a
+          >.
+        </p>
+        <p>
+          For example, when creating our player, we added the line
+          <code>player.body.gravity.y = 300;</code>, which sets the local
+          gravity, or how fast he'll fall. <code>300</code> is an arbitrary
+          number, but the higher this value, the faster he'll come down while
+          jumping or falling from <code>platforms</code>.
+        </p>
+        <div class="centered">
+          <img src="assets/step5-1.png" />
+        </div>
+        <p>
+          But you might have noticed that when he falls he's not landing on the
+          ground, but rather on the edge of the world. Try commenting out the
+          line with <code>collideWorldBounds</code> and see what happens to our
+          <code>dude</code>.
+        </p>
+        <p>
+          <code>Physics.ARCADE</code> also allows us to check collisions of any
+          body in the game world. Add back the line we just commented out so he
+          can't leave the frame, and then insert the following line into the
+          <code>update()</code> function:
+        </p>
+        <pre><code class="hljs js">function update() {
 
   var onPlatform = game.physics.arcade.collide(player, platforms);
   
 }</code></pre>
-      <p>This function is called by the game engine for every frame and the <code>.collide()</code> function will check
-        to see if the <code>player</code> and <code>platforms</code> have collided, or touched. If they have, it will
-        stop them from overlapping, and this is how we can get the <code>dude</code> to land on the ground and ledges
-        without falling to the bottom of the game world.</p>
-      <div class="centered">
-        <img src="assets/step5-2.png">
-      </div>
-      <h3>Step 6 - Keyboard Controls</h3>
-      <p>Great, now our <code>dude</code> is able to land correctly, but he also can't yet move, so let's fix that! One
-        way we can control characters using Phaser is with arrow keys. To do this, all we have to do is add a new
-        variable and create a <code>cursors</code> object.</p>
-      <pre><code class="hljs js">var cursors;
+        <p>
+          This function is called by the game engine for every frame and the
+          <code>.collide()</code> function will check to see if the
+          <code>player</code> and <code>platforms</code> have collided, or
+          touched. If they have, it will stop them from overlapping, and this is
+          how we can get the <code>dude</code> to land on the ground and ledges
+          without falling to the bottom of the game world.
+        </p>
+        <div class="centered">
+          <img src="assets/step5-2.png" />
+        </div>
+        <h3>Step 6 - Keyboard Controls</h3>
+        <p>
+          Great, now our <code>dude</code> is able to land correctly, but he
+          also can't yet move, so let's fix that! One way we can control
+          characters using Phaser is with arrow keys. To do this, all we have to
+          do is add a new variable and create a <code>cursors</code> object.
+        </p>
+        <pre><code class="hljs js">var cursors;
 
 function create() {
 
@@ -359,13 +604,23 @@ function create() {
   cursors = game.input.keyboard.createCursorKeys();
 
 }</code></pre>
-      <p>Calling <a href="http://phaser.io/docs/2.2.2/Phaser.Keyboard.html#createCursorKeys"
-          target="_blank"><code>.createCursorKeys()</code></a> returns an object with four properties for each arrow
-        key: <code>up</code>, <code>down</code>, <code>left</code>, and <code>right</code>. With just one line of code
-        we can easily <code>update()</code> the location of our <code>player</code>.</p>
-      <p>Now that we have access to keyboard controls, we need to add in some logic to move the <code>'dude'</code>
-        around:</p>
-      <pre><code class="hljs js">function update() {
+        <p>
+          Calling
+          <a
+            href="http://phaser.io/docs/2.2.2/Phaser.Keyboard.html#createCursorKeys"
+            target="_blank"
+            ><code>.createCursorKeys()</code></a
+          >
+          returns an object with four properties for each arrow key:
+          <code>up</code>, <code>down</code>, <code>left</code>, and
+          <code>right</code>. With just one line of code we can easily
+          <code>update()</code> the location of our <code>player</code>.
+        </p>
+        <p>
+          Now that we have access to keyboard controls, we need to add in some
+          logic to move the <code>'dude'</code> around:
+        </p>
+        <pre><code class="hljs js">function update() {
 
   // ...
 
@@ -392,26 +647,36 @@ function create() {
     player.frame = 4;
 
   }</code></pre>
-      <p>Awesome, now our little <code>'dude'</code> can move around to the left and to the right. But can he hop onto
-        one of the ledges? Nope, not yet. If you're thinking we can use <code>cursors.up</code> to make him jump, you're
-        absolutely right!</p>
-      <p>Let's add a new conditional check to make him jump, as follows:</p>
-      <pre><code class="hljs js">if (cursors.up.isDown && onPlatform && player.body.touching.down) {
+        <p>
+          Awesome, now our little <code>'dude'</code> can move around to the
+          left and to the right. But can he hop onto one of the ledges? Nope,
+          not yet. If you're thinking we can use <code>cursors.up</code> to make
+          him jump, you're absolutely right!
+        </p>
+        <p>Let's add a new conditional check to make him jump, as follows:</p>
+        <pre><code class="hljs js">if (cursors.up.isDown && onPlatform && player.body.touching.down) {
 
   // Make him jump up
   player.body.velocity.y = -350;
 
 }</code></pre>
-      <p>The second and third checks here make sure that he is touching one of the platforms, as we (probably) don't
-        want him to get an extra boost when he's already jumping or on top of some other object.</p>
-      <div class="centered">
-        <img src="assets/step6.png">
-      </div>
-      <h3>Step 7 - Collecting Stars</h3>
-      <p>Mr. <code>'dude'</code> seems a little lonely, doesn't he? Let's give him a purpose! We'll drop some stars into
-        the game world and let him collect them. Just as with the <code>platforms</code>, we can <code>add</code> a
-        <code>group()</code> and then <code>create()</code> several objects in it.</p>
-      <pre><code class="hljs js">var stars;
+        <p>
+          The second and third checks here make sure that he is touching one of
+          the platforms, as we (probably) don't want him to get an extra boost
+          when he's already jumping or on top of some other object.
+        </p>
+        <div class="centered">
+          <img src="assets/step6.png" />
+        </div>
+        <h3>Step 7 - Collecting Stars</h3>
+        <p>
+          Mr. <code>'dude'</code> seems a little lonely, doesn't he? Let's give
+          him a purpose! We'll drop some stars into the game world and let him
+          collect them. Just as with the <code>platforms</code>, we can
+          <code>add</code> a <code>group()</code> and then
+          <code>create()</code> several objects in it.
+        </p>
+        <pre><code class="hljs js">var stars;
 
 function create() {
 
@@ -432,48 +697,82 @@ function create() {
     star.body.bounce.y = 0.7 + Math.random() * 0.2;
   
   }</code></pre>
-      <p>If you run the code, you might notice a problem. Just as we did with the <code>player</code> and
-        <code>platforms</code>, we need to <code>.collide()</code> the <code>stars</code> and <code>platforms</code> so
-        the <code>stars</code> don't fall through.</p>
-      <p>Next we can have our <code>'dude'</code> collect the <code>stars</code> using the <code>.overlap()</code>
-        method:</p>
-      <pre><code class="hljs js">game.physics.arcade.overlap(player, stars, collectStar, null, this);</code></pre>
-      <p>You can probably tell what <code>player</code> and <code>stars</code> mean here, but what about
-        <code>collectStar</code>? This third parameter is a callback function which gets invoked when the two previous
-        parameter overlap. The fouth parameter, <code>null</code> is another callback function that lets you make
-        additional checks before calling the first callback, and finally <code>this</code> is a reference to the
-        context. Don't worry so much about the latter parameters; the first three are most important for us, but if you
-        want to learn more, check out the <a href="http://phaser.io/docs/2.2.2/Phaser.Physics.Arcade.html#overlap"
-          target="_blank">documentation</a>.</p>
-      <p>But more on that callback function; we need to create it! Outside of the existing three functions, add:</p>
-      <pre><code class="hljs js">function collectStar(player, star) {
+        <p>
+          If you run the code, you might notice a problem. Just as we did with
+          the <code>player</code> and <code>platforms</code>, we need to
+          <code>.collide()</code> the <code>stars</code> and
+          <code>platforms</code> so the <code>stars</code> don't fall through.
+        </p>
+        <p>
+          Next we can have our <code>'dude'</code> collect the
+          <code>stars</code> using the <code>.overlap()</code> method:
+        </p>
+        <pre><code class="hljs js">game.physics.arcade.overlap(player, stars, collectStar, null, this);</code></pre>
+        <p>
+          You can probably tell what <code>player</code> and
+          <code>stars</code> mean here, but what about <code>collectStar</code>?
+          This third parameter is a callback function which gets invoked when
+          the two previous parameter overlap. The fouth parameter,
+          <code>null</code> is another callback function that lets you make
+          additional checks before calling the first callback, and finally
+          <code>this</code> is a reference to the context. Don't worry so much
+          about the latter parameters; the first three are most important for
+          us, but if you want to learn more, check out the
+          <a
+            href="http://phaser.io/docs/2.2.2/Phaser.Physics.Arcade.html#overlap"
+            target="_blank"
+            >documentation</a
+          >.
+        </p>
+        <p>
+          But more on that callback function; we need to create it! Outside of
+          the existing three functions, add:
+        </p>
+        <pre><code class="hljs js">function collectStar(player, star) {
 
   // Remove the star from the game world
   star.kill();
 
 }</code></pre>
-      <p>A note about the parameters here: Phaser is smart enough to automatically send them to our callback function
-        since it knows we're checking if the <code>player</code> and <code>star</code> have overlapped.</p>
-      <div class="centered">
-        <img src="assets/step7.png">
-      </div>
-      <h3>Step 8 - Keeping Score</h3>
-      <p>So now we have a fully functional game, but let's take it one set further and keep score based on how many
-        <code>stars</code> the <code>player</code> has collected. We can do this two two extra variables: one to keep
-        track of the score, and one to display it:</p>
-      <pre><code class="hljs js">// Initalize score to zero
+        <p>
+          A note about the parameters here: Phaser is smart enough to
+          automatically send them to our callback function since it knows we're
+          checking if the <code>player</code> and <code>star</code> have
+          overlapped.
+        </p>
+        <div class="centered">
+          <img src="assets/step7.png" />
+        </div>
+        <h3>Step 8 - Keeping Score</h3>
+        <p>
+          So now we have a fully functional game, but let's take it one set
+          further and keep score based on how many <code>stars</code> the
+          <code>player</code> has collected. We can do this two two extra
+          variables: one to keep track of the score, and one to display it:
+        </p>
+        <pre><code class="hljs js">// Initalize score to zero
 var score = 0;
 
 // Initalize Phaser.Text object to display the score
 var scoreText;</code></pre>
-      <p>Then let's setup the <code>scoreText</code> (think about where this should go):</p>
-      <pre><code class="hljs js">scoreText = game.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000000' });</code></pre>
-      <p>If you're wondering what the first two parameters here mean, change them up and see what happens. The third
-        parameter is the <code>string</code> of text we'll be adding, and the last one inside <code>{ }</code> is an
-        object used to style the text.</p>
-      <p>After fully initializing <code>scoreText</code> we need to update it when a <code>star</code> is collected. We
-        can piggy back off of our callback function to do this since both actions will happen at the same time:</p>
-      <pre><code class="hljs js">function collectStar(player, star) {
+        <p>
+          Then let's setup the <code>scoreText</code> (think about where this
+          should go):
+        </p>
+        <pre><code class="hljs js">scoreText = game.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000000' });</code></pre>
+        <p>
+          If you're wondering what the first two parameters here mean, change
+          them up and see what happens. The third parameter is the
+          <code>string</code> of text we'll be adding, and the last one inside
+          <code>{ }</code> is an object used to style the text.
+        </p>
+        <p>
+          After fully initializing <code>scoreText</code> we need to update it
+          when a <code>star</code> is collected. We can piggy back off of our
+          callback function to do this since both actions will happen at the
+          same time:
+        </p>
+        <pre><code class="hljs js">function collectStar(player, star) {
 
   // ...
 
@@ -481,64 +780,95 @@ var scoreText;</code></pre>
   scoreText = 'Score: ' + score;
 
 }</code></pre>
-      <p>And there you have it, a fully functional Phaser game! Test it out and make sure your score is correctly
-        incremented with each <code>star</code> that you collect.</p>
-      <div class="centered">
-        <img src="assets/step8.png">
+        <p>
+          And there you have it, a fully functional Phaser game! Test it out and
+          make sure your score is correctly incremented with each
+          <code>star</code> that you collect.
+        </p>
+        <div class="centered">
+          <img src="assets/step8.png" />
+        </div>
       </div>
-    </div>
 
-    <div class="section">
-      <h2 class="mint">Making It Your Own</h2>
-      <h3>Add Your Personal Style</h3>
-      <p>Put the finishing touches on your game by updating its look!</p>
-      <p>Do a Google image search for a new background or texture to use for the <code>platforms</code>, or search
-        through some of the sites in the References below. Upload your new images to Thimble and update your JS code to
-        use them.</p>
-      <p>You can also style the rest of your Web page, since a plain white background is boring. First, add a new HTML
-        element to your page with an <code>id</code>. We'll use this element to append the game to, rather than
-        <code>&lt;body&gt;</code>:</p>
-      <pre><code class="hljs html">&lt;div id="game"&gt;&lt;/div&gt;</code></pre>
-      <p>Then update your <code>game</code> variable with the same <code>id</code> as the constructor's fourth
-        parameter. From here, you're ready to apply CSS styling to the game's viewport. Just setup some rules in
-        <code>styles.css</code> using the <code>id</code> as your selector:</p>
-      <pre><code class="hljs css">#game {
+      <div class="section">
+        <h2 class="mint">Making It Your Own</h2>
+        <h3>Add Your Personal Style</h3>
+        <p>Put the finishing touches on your game by updating its look!</p>
+        <p>
+          Do a Google image search for a new background or texture to use for
+          the <code>platforms</code>, or search through some of the sites in the
+          References below. Upload your new images to Glitch assets and update your JS
+          code to use them.
+        </p>
+        <p>
+          You can also style the rest of your Web page, since a plain white
+          background is boring. First, add a new HTML element to your page with
+          an <code>id</code>. We'll use this element to append the game to,
+          rather than <code>&lt;body&gt;</code>:
+        </p>
+        <pre><code class="hljs html">&lt;div id="game"&gt;&lt;/div&gt;</code></pre>
+        <p>
+          Then update your <code>game</code> variable with the same
+          <code>id</code> as the constructor's fourth parameter. From here,
+          you're ready to apply CSS styling to the game's viewport. Just setup
+          some rules in <code>styles.css</code> using the <code>id</code> as
+          your selector:
+        </p>
+        <pre><code class="hljs css">#game {
   border: 10px solid white;
   margin: 50px auto;
   width: 800px;
 }</code></pre>
-      <div class="centered">
-        <img src="assets/stylecapture.png">
-      </div>
-      <h3>Change the Collected Item</h3>
-      <p>The <code>assets</code> folder contains lots of additional sprites you can add to your game. Try to change the
-        collected item from a <code>star</code> to a <code>diamond</code> or one of the colored <code>ball</code>s. Note
-        that these assets have different widths and to make them evently spaced out you might need to adjust the
-        location of where they get created. Also, you can add more than <code>12</code> items - try doubling that number
-        or making a hundred!</p>
-      <p>Bonus: use all of the <code>ball</code> assets in your <code>for</code> loop to create items of different
-        colors. Can you come up with a good way to iterate though each color to minimize the amount of duplicated code?
-      </p>
-      <div class="centered">
-        <img src="assets/itemscapture.png">
-      </div>
-      <h3>Go Crazy with Platforms</h3>
-      <p>Make your game more challenging by adding additional ledges to the <code>platforms</code> group. Put them at
-        different locations around the game world and use <code>scale.setTo()</code> to adjust the height and width of
-        each one. With the proper parameters, can you turn a ledge into a pillar that the <code>player</code> will need
-        to jump over?</p>
-      <p>Also try setting <code>body.immovable = false;</code> and see what happens to the <code>ground</code> or
-        <code>platforms</code>. If you remove some <code>stars</code> you may be able to allow the <code>player</code>
-        to only jump on a ledge once.</p>
-      <div class="centered">
-        <img src="assets/platformscapture.png">
-      </div>
-      <h3>Take It to the Next Level with Sound</h3>
-      <p>Images and sprite sheets aren't the only kind of assets that Phaser will let you <code>load</code>; you can
-        also <code>add</code> sound to your games as background music or effects when some action occurs. The
-        boilerplate project contains a few clips to get you started, including one called <code>key.wav</code>, which
-        can be added to your game like this:</p>
-      <pre><code class="hljs js">var sound;
+        <div class="centered">
+          <img src="assets/stylecapture.png" />
+        </div>
+        <h3>Change the Collected Item</h3>
+        <p>
+          The <code>assets</code> folder contains lots of additional sprites you
+          can add to your game. Try to change the collected item from a
+          <code>star</code> to a <code>diamond</code> or one of the colored
+          <code>ball</code>s. Note that these assets have different widths and
+          to make them evently spaced out you might need to adjust the location
+          of where they get created. Also, you can add more than
+          <code>12</code> items - try doubling that number or making a hundred!
+        </p>
+        <p>
+          Bonus: use all of the <code>ball</code> assets in your
+          <code>for</code> loop to create items of different colors. Can you
+          come up with a good way to iterate though each color to minimize the
+          amount of duplicated code?
+        </p>
+        <div class="centered">
+          <img src="assets/itemscapture.png" />
+        </div>
+        <h3>Go Crazy with Platforms</h3>
+        <p>
+          Make your game more challenging by adding additional ledges to the
+          <code>platforms</code> group. Put them at different locations around
+          the game world and use <code>scale.setTo()</code> to adjust the height
+          and width of each one. With the proper parameters, can you turn a
+          ledge into a pillar that the <code>player</code> will need to jump
+          over?
+        </p>
+        <p>
+          Also try setting <code>body.immovable = false;</code> and see what
+          happens to the <code>ground</code> or <code>platforms</code>. If you
+          remove some <code>stars</code> you may be able to allow the
+          <code>player</code> to only jump on a ledge once.
+        </p>
+        <div class="centered">
+          <img src="assets/platformscapture.png" />
+        </div>
+        <h3>Take It to the Next Level with Sound</h3>
+        <p>
+          Images and sprite sheets aren't the only kind of assets that Phaser
+          will let you <code>load</code>; you can also <code>add</code> sound to
+          your games as background music or effects when some action occurs. The
+          boilerplate project contains a few clips to get you started, including
+          one called <code>key.wav</code>, which can be added to your game like
+          this:
+        </p>
+        <pre><code class="hljs js">var sound;
 
 function preload() {
 
@@ -555,42 +885,71 @@ function create() {
   sound = game.add.audio('sound');
 
 }</code></pre>
-      <p>Then your sound is ready to use whenever you need it with just one additional line:</p>
-      <pre><code class="hljs js">sound.play();</code></pre>
-      If you wanted to play this <code>sound</code> when an item was collected, where could this line be added to the
-      game?
-      <h3>Pick a New Sprite Sheet</h3>
-      <p>From a game design perspective, it's really important to carefully think about the characters you want to
-        introduce into your game world. Picking the right ones will give a unique feel to your game and have a big
-        impact on your users' overall experience.</p>
-      <p>Included in the Phaser Boilerplate project is another sprite sheet called <code>puppy.png</code> that we can
-        use:</p>
-      <div class="centered">
-        <img src="assets/puppy.png">
-      </div>
-      <p>This sprite sheet is more complicated than <code>dude.png</code> for a few reasons: there are more frames to
-        choose from, including a blank one at the end, and they're all facing to the right. But we can make it work!</p>
-      <p>First, let's change our code from <code>'dude'</code> to <code>'puppy'</code>. We'll need to change the last
-        line of <code>preload()</code>, to rename the asset, its location, and the size of each frame.</p>
-      <pre><code class="hljs js">function preload() {
+        <p>
+          Then your sound is ready to use whenever you need it with just one
+          additional line:
+        </p>
+        <pre><code class="hljs js">sound.play();</code></pre>
+        If you wanted to play this <code>sound</code> when an item was
+        collected, where could this line be added to the game?
+        <h3>Pick a New Sprite Sheet</h3>
+        <p>
+          From a game design perspective, it's really important to carefully
+          think about the characters you want to introduce into your game world.
+          Picking the right ones will give a unique feel to your game and have a
+          big impact on your users' overall experience.
+        </p>
+        <p>
+          Included in the Phaser Boilerplate project is another sprite sheet
+          called <code>puppy.png</code> that we can use:
+        </p>
+        <div class="centered">
+          <img src="assets/puppy.png" />
+        </div>
+        <p>
+          This sprite sheet is more complicated than <code>dude.png</code> for a
+          few reasons: there are more frames to choose from, including a blank
+          one at the end, and they're all facing to the right. But we can make
+          it work!
+        </p>
+        <p>
+          First, let's change our code from <code>'dude'</code> to
+          <code>'puppy'</code>. We'll need to change the last line of
+          <code>preload()</code>, to rename the asset, its location, and the
+          size of each frame.
+        </p>
+        <pre><code class="hljs js">function preload() {
   
   // ...
 
   game.load.spritesheet('puppy', 'assets/puppy.png', ..., ...);
 
 }</code></pre>
-      <p>Open the asset in the Thimble editor to see the size of the sprite sheet. How can you determine the height and
-        width of each frame with this information?</p>
-      <p>Next, update the <code>player</code> declaration in <code>create()</code> so we reference the correct asset. It
-        just so happens that using frames <code>[5, 6, 7, 8]</code> works well for this sprite sheet too, so let's try
-        it out and see what happens.</p>
-      <p>With just those few changes, making the <code>'puppy'</code> move to the <code>'right'</code> works quite well,
-        but things get weird when we go to the <code>'left'</code>. Update the frames in the <code>'left'</code>
-        animation to match those in the <code>'right'</code> and we get a pretty close. But he's still not facing the
-        correct direction.</p>
-      <p>How can me make the <code>'puppy'</code> not moonwalk? Luckily Phaser can help us flip the sprite sheet. To do
-        this, first add an <code>anchor</code>, and then adjust the <code>scale</code>:</p>
-      <pre><code class="hljs js">function update() {
+        <p>
+          Open the asset in the Glitch editor to see the size of the sprite
+          sheet. How can you determine the height and width of each frame with
+          this information?
+        </p>
+        <p>
+          Next, update the <code>player</code> declaration in
+          <code>create()</code> so we reference the correct asset. It just so
+          happens that using frames <code>[5, 6, 7, 8]</code> works well for
+          this sprite sheet too, so let's try it out and see what happens.
+        </p>
+        <p>
+          With just those few changes, making the <code>'puppy'</code> move to
+          the <code>'right'</code> works quite well, but things get weird when
+          we go to the <code>'left'</code>. Update the frames in the
+          <code>'left'</code> animation to match those in the
+          <code>'right'</code> and we get a pretty close. But he's still not
+          facing the correct direction.
+        </p>
+        <p>
+          How can me make the <code>'puppy'</code> not moonwalk? Luckily Phaser
+          can help us flip the sprite sheet. To do this, first add an
+          <code>anchor</code>, and then adjust the <code>scale</code>:
+        </p>
+        <pre><code class="hljs js">function update() {
 
   // ...
 
@@ -607,74 +966,205 @@ function create() {
   // ...
 
 }</code></pre>
-      <p>Setting the <code>anchor</code> places an imaginary point in the middle of the sprite sheet that Phaser will
-        use to flip the image over, creating an axis in both dimentions. Then, when the user presses the left arrow key
-        we'll flip the image, and likewise flip it back to the original orientation when the right arrow key is pressed
-        down.</p>
-      <p>One final improvement could be to update the default frame to number <code>5</code>, but can you think of ways
-        to use some of the other frames that are in the sprite sheet?</p>
-      <div class="centered">
-        <img src="assets/puppycapture.png">
+        <p>
+          Setting the <code>anchor</code> places an imaginary point in the
+          middle of the sprite sheet that Phaser will use to flip the image
+          over, creating an axis in both dimentions. Then, when the user presses
+          the left arrow key we'll flip the image, and likewise flip it back to
+          the original orientation when the right arrow key is pressed down.
+        </p>
+        <p>
+          One final improvement could be to update the default frame to number
+          <code>5</code>, but can you think of ways to use some of the other
+          frames that are in the sprite sheet?
+        </p>
+        <div class="centered">
+          <img src="assets/puppycapture.png" />
+        </div>
+        <h3>Get Really Creative</h3>
+        <p>
+          Check out the
+          <a href="http://phaser.io/examples/v2" target="_blank"
+            >Phaser 2 Examples</a
+          >
+          to gain inspiration for addition enhancements to your game, or if
+          you're feeling especially empowered, come up with a new concept and
+          get started on designing your next game!
+        </p>
       </div>
-      <h3>Get Really Creative</h3>
-      <p>Check out the <a href="http://phaser.io/examples/v2" target="_blank">Phaser 2 Examples</a> to gain inspiration
-        for addition enhancements to your game, or if you're feeling especially empowered, come up with a new concept
-        and get started on designing your next game!</p>
-    </div>
 
-    <div class="section">
-      <h2 class="mint">References</h2>
-      <p>The Web is <span class="bold">full</span> of great resources to help you continue learning more about the
-        topics we began to explore in this workshop. You'll soon see that we only scratched the surface, so below are
-        some links to get you started:</p>
-      <h3>Phaser Resources</h3>
-      <p><a href="http://phaser.io/examples/v2" target="_blank">Phaser 2 Examples</a></p>
-      <p><a href="http://phaser.io/docs/2.2.2/index" target="_blank">Phaser 2.2.2 API Documentation</a></p>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser" target="_blank">MDN
-          Web Docs Phaser Tutorial</a></p>
-      <p><a href="https://mozdevs.github.io/html5-games-workshop/en/guides/platformer/start-here/"
-          target="_blank">Mozilla HTML5 Games Workshop</a></p>
-      <p><a href="http://www.html5gamedevs.com/forum/14-phaser-2/" target="_blank">HTML5 Game Devs Phaser 2 Forums</a>
-      </p>
-      <p><a href="https://github.com/photonstorm/phaser-ce/tree/v2.2.2" target="_blank">Phaser 2.2.2 Source Code</a></p>
-      <h3>HTML Resources</h3>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs HTML</a></p>
-      <p><a href="https://studio.code.org/s/csd2" target="_blank">Code.org Web Development Unit</a></p>
-      <p><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a></p>
-      <p><a href="https://www.codecademy.com/learn/learn-html" target="_blank">Codecademy Learn HTML Course</a></p>
-      <h3>CSS Resources</h3>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web Docs CSS</a></p>
-      <p><a href="https://www.w3schools.com/css/" target="_blank">W3Schools CSS Tutorial</a></p>
-      <p><a href="https://flukeout.github.io/" target="_blank">CSS Diner</a></p>
-      <h3>JS Resources</h3>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN Web Docs JavaScript</a>
-      </p>
-      <p><a href="https://www.w3schools.com/js/" target="_blank">W3Schools JS Tutorial</a></p>
-      <p><a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Codecademy Introduction
-          to JavaScript Course</a></p>
-      <h3>Thimble Resources</h3>
-      <p><a href="https://github.com/mozilla/thimble.mozilla.org/wiki/About-Thimble" target="_blank">Thimble User
-          Guide</a></p>
-      <p><a href="https://thimble.mozilla.org/en-US/features" target="_blank">Thimble Features</a></p>
-      <p><a href="https://learning.mozilla.org/blog/our-creative-community-thimble-remixes" target="_blank">Thimble
-          Project Ideas</a></p>
-      <h3>General Resources</h3>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Games" target="_blank">MDN Web Docs Game Development</a></p>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">MDN Web Docs Learn Web Development</a>
-      </p>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="_blank">MDN Web Docs Canvas
-          API</a></p>
-      <p><a href="https://mozdevs.github.io/html5-games-workshop/en/guides/setup/setup-your-machine/"
-          target="_blank">How to Setup Your Own Local Web Server</a></p>
-      <p><a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger" target="_blank">In Depth Details on Debugging
-          with Firefox</a></p>
-      <h3>Asset Resources</h3>
-      <p><a href="https://opengameart.org/" target="_blank">OpenGameArt.org</a></p>
-      <p><a href="https://www.youtube.com/audiolibrary/soundeffects" target="_blank">YouTube Sound Effects Library</a>
-      </p>
-      <p><a href="https://freesound.org/browse/tags/game/" target="_blank">FreeSound Game Sounds</a></p>
+      <div class="section">
+        <h2 class="mint">References</h2>
+        <p>
+          The Web is <span class="bold">full</span> of great resources to help
+          you continue learning more about the topics we began to explore in
+          this workshop. You'll soon see that we only scratched the surface, so
+          below are some links to get you started:
+        </p>
+        <h3>Phaser Resources</h3>
+        <p>
+          <a href="http://phaser.io/examples/v2" target="_blank"
+            >Phaser 2 Examples</a
+          >
+        </p>
+        <p>
+          <a href="http://phaser.io/docs/2.2.2/index" target="_blank"
+            >Phaser 2.2.2 API Documentation</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser"
+            target="_blank"
+            >MDN Web Docs Phaser Tutorial</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://mozdevs.github.io/html5-games-workshop/en/guides/platformer/start-here/"
+            target="_blank"
+            >Mozilla HTML5 Games Workshop</a
+          >
+        </p>
+        <p>
+          <a
+            href="http://www.html5gamedevs.com/forum/14-phaser-2/"
+            target="_blank"
+            >HTML5 Game Devs Phaser 2 Forums</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://github.com/photonstorm/phaser-ce/tree/v2.2.2"
+            target="_blank"
+            >Phaser 2.2.2 Source Code</a
+          >
+        </p>
+        <h3>HTML Resources</h3>
+        <p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+            target="_blank"
+            >MDN Web Docs HTML</a
+          >
+        </p>
+        <p>
+          <a href="https://studio.code.org/s/csd2" target="_blank"
+            >Code.org Web Development Unit</a
+          >
+        </p>
+        <p>
+          <a href="https://www.w3schools.com/html/" target="_blank"
+            >W3Schools HTML Tutorial</a
+          >
+        </p>
+        <p>
+          <a href="https://www.codecademy.com/learn/learn-html" target="_blank"
+            >Codecademy Learn HTML Course</a
+          >
+        </p>
+        <h3>CSS Resources</h3>
+        <p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+            target="_blank"
+            >MDN Web Docs CSS</a
+          >
+        </p>
+        <p>
+          <a href="https://www.w3schools.com/css/" target="_blank"
+            >W3Schools CSS Tutorial</a
+          >
+        </p>
+        <p>
+          <a href="https://flukeout.github.io/" target="_blank">CSS Diner</a>
+        </p>
+        <h3>JS Resources</h3>
+        <p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            target="_blank"
+            >MDN Web Docs JavaScript</a
+          >
+        </p>
+        <p>
+          <a href="https://www.w3schools.com/js/" target="_blank"
+            >W3Schools JS Tutorial</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.codecademy.com/learn/introduction-to-javascript"
+            target="_blank"
+            >Codecademy Introduction to JavaScript Course</a
+          >
+        </p>
+        <h3>Glitch Resources</h3>
+        <p>
+          <a href="https://glitch.com/create" target="_blank"
+            >Start Coding!</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://glitch.com/help/tag/getting-started/"
+            target="_blank"
+            >Getting Started FAQs</a
+          >
+        </p>
+        <h3>General Resources</h3>
+        <p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Games"
+            target="_blank"
+            >MDN Web Docs Game Development</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn"
+            target="_blank"
+            >MDN Web Docs Learn Web Development</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"
+            target="_blank"
+            >MDN Web Docs Canvas API</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://mozdevs.github.io/html5-games-workshop/en/guides/setup/setup-your-machine/"
+            target="_blank"
+            >How to Setup Your Own Local Web Server</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Tools/Debugger"
+            target="_blank"
+            >In Depth Details on Debugging with Firefox</a
+          >
+        </p>
+        <h3>Asset Resources</h3>
+        <p>
+          <a href="https://opengameart.org/" target="_blank">OpenGameArt.org</a>
+        </p>
+        <p>
+          <a
+            href="https://www.youtube.com/audiolibrary/soundeffects"
+            target="_blank"
+            >YouTube Sound Effects Library</a
+          >
+        </p>
+        <p>
+          <a href="https://freesound.org/browse/tags/game/" target="_blank"
+            >FreeSound Game Sounds</a
+          >
+        </p>
+      </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
