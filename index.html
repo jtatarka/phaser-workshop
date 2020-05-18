@@ -81,9 +81,9 @@
         />
         <p>
           Glitch is an online coding environment which can be used to learn
-          HTML, CSS, and JS. We'll use Glitch to create and host our Phaser
-          games within the Cloud (meaning it's available from any computer with
-          no need to install any software) for free.
+          HTML, CSS, and JS. We'll use it to create and host our Phaser games
+          within the Cloud (meaning it's available from any computer with no
+          need to install any software) for free.
         </p>
         <h3>Creating an Account</h3>
         <p>
@@ -145,22 +145,24 @@
         <p>
           As with any coding project, you're bound to run into some issues and
           bugs while you're developing your Phaser game. Luckily, Phaser has
-          console logging which helps us identify issues in code, and Glitch
-          has a built in console to display these messages when using the
-          editor. You can reveal it at anytime by clicking on the "Tools" button
-          at the bottom right of the preview panel, then selecting "Logs".
+          console logging which helps us identify issues in code, and Glitch has
+          a built in console to display these messages when using the editor.
+          You can reveal it at anytime by clicking on the "Tools" button at the
+          bottom right of the preview panel, then selecting "Logs".
         </p>
         <p>
           For more advanced debugging, you can use Chrome's Developer Tools
-          (press <code>F12</code> or <code>CTRL + SHIFT + I</code></cdoe>to open, then click on the Sources tab). Dev
-          Tools lets you set breakpoints in your code and watch variables at
-          different times during code execution to help identify, troubleshoot,
-          and fix bugs.
+          (press <code>F12</code> or <code>CTRL + SHIFT + I</code> to open),
+          then click on the Sources tab. Dev Tools lets you set breakpoints in
+          your code and watch variables at different times during code execution
+          to help identify, troubleshoot, and fix bugs.
         </p>
         <p>
-          It's easiest to do this when your game is in a new tab but either way is possible; just look for
-          <code>game.js</code> in the file explorer. You can manually browse through the files, or by pressing
-          <code>CTRL + P</code>, then typing <code>game.js</code>, which will take you stright there.
+          It's easiest to do this when your game is in a new tab but either way
+          is possible; just look for
+          <code>game.js</code> in the file explorer. You can manually browse
+          through the files, or by pressing <code>CTRL + P</code>, then typing
+          <code>game.js</code>, which will take you straight there.
         </p>
       </div>
 
@@ -268,7 +270,7 @@
           diferentiate properties from methods by looking for parentheses.
         </p>
         <p>
-          Any things within the parenteses of a method are called parameters,
+          Any things within the parentheses of a method are called parameters,
           but note that some methods do no require parameters. In the example
           above, <code>.add()</code> takes four parameters of various types,
           which are used within the logic of the method. The first is a string
@@ -316,7 +318,9 @@
           same tutorial for the new, completely rewritten framework available
           <a
             href="http://phaser.io/tutorials/making-your-first-phaser-3-game"
-            target="_blank">here</a>.
+            target="_blank"
+            >here</a
+          >.
         </p>
         <h3>Step 0 - Boilerplate</h3>
         <p>
@@ -332,7 +336,11 @@
           >, or copy the code below into an existing Web page to get started
           with any new Phaser game.
         </p>
-        <pre><code class="hljs js">var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+        <pre><code class="hljs js">var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
+  preload: preload,
+  create: create,
+  update: update
+});
 
 function preload() {
 
@@ -353,8 +361,8 @@ function update() {
         </p>
         <p>
           The first two parameters are the width and height of your game. We're
-          using <code>800</code> and <code>600</code> by default, but you can
-          create a game of any size you like.
+          using <code>800</code> and <code>600</code> pixels by default, but you
+          can create a game of any size you like.
         </p>
         <p>
           The third parameter is the rendering context. It's a good idea to
@@ -365,7 +373,7 @@ function update() {
         </p>
         <p>
           Next up is the element of the Web page in which your game will live.
-          By specifying an empty string (<code>''</code>) we'll append to the
+          By specifying an empty string (<code>''</code>), we'll append to the
           page's <code>&lt;body&gt;</code>. Finally, the fifth parameter is an
           object which maps our references to Phaser's essential functions.
         </p>
@@ -408,7 +416,7 @@ function update() {
         <h3>Step 2 - Create a Sprite</h3>
         <p>
           Now that we've loaded some assets, let's turn them into a sprite so we
-          can use them in our game. Sprites should be <code>added</code> to the
+          can use them in our game. Sprites should be <code>add</code>ed to the
           <code>create()</code> function of our application, and will look like
           this:
         </p>
@@ -476,9 +484,9 @@ ground.body.immovable = true;</code></pre>
         <h3>Step 4 - Sprite Sheets</h3>
         <p>
           Our sprite sheet from Step 2 was loaded with a different method
-          because sprite sheets are not images. They differ because a sprite
-          sheet is made up of animation frames, not a single picture. If you
-          didn't take a look at the <code>'dude'</code> asset before, here's
+          because sprite sheets are not basic images. They differ because a
+          sprite sheet is made up of animation frames, not a single picture. If
+          you didn't take a look at the <code>'dude'</code> asset before, here's
           what he looks like:
         </p>
         <div class="centered">
@@ -534,7 +542,7 @@ player.animations.add('right', [ ... ], 10, true);</code></pre>
         </p>
         <p>
           Can you complete the <code>'right'</code> animation with the correct
-          <code>frames</code>?
+          <code>frame</code>s?
         </p>
         <h3>Step 5 - More on Physics</h3>
         <p>
@@ -745,7 +753,7 @@ function create() {
         </div>
         <h3>Step 8 - Keeping Score</h3>
         <p>
-          So now we have a fully functional game, but let's take it one set
+          So now we have a fairly functional game, but let's take it one set
           further and keep score based on how many <code>stars</code> the
           <code>player</code> has collected. We can do this two two extra
           variables: one to keep track of the score, and one to display it:
@@ -797,8 +805,8 @@ var scoreText;</code></pre>
         <p>
           Do a Google image search for a new background or texture to use for
           the <code>platforms</code>, or search through some of the sites in the
-          References below. Upload your new images to Glitch assets and update your JS
-          code to use them.
+          References below. Upload your new images to Glitch assets and update
+          your JS code to use them.
         </p>
         <p>
           You can also style the rest of your Web page, since a plain white
@@ -838,6 +846,7 @@ var scoreText;</code></pre>
           come up with a good way to iterate though each color to minimize the
           amount of duplicated code?
         </p>
+        <p>Bonus bonus: use the spritesheet instead of individual files.</p>
         <div class="centered">
           <img src="assets/itemscapture.png" />
         </div>
@@ -852,9 +861,9 @@ var scoreText;</code></pre>
         </p>
         <p>
           Also try setting <code>body.immovable = false;</code> and see what
-          happens to the <code>ground</code> or <code>platforms</code>. If you
-          remove some <code>stars</code> you may be able to allow the
-          <code>player</code> to only jump on a ledge once.
+          happens to the <code>ground</code> or <code>platforms</code>. For
+          tougher game play, you may be able to allow the <code>player</code> to
+          only jump on a ledge once.
         </p>
         <div class="centered">
           <img src="assets/platformscapture.png" />
@@ -900,7 +909,7 @@ function create() {
           big impact on your users' overall experience.
         </p>
         <p>
-          Included in the Phaser Boilerplate project is another sprite sheet
+          Included in the Phaser boilerplate project is another sprite sheet
           called <code>puppy.png</code> that we can use:
         </p>
         <div class="centered">
@@ -1101,14 +1110,10 @@ function create() {
         </p>
         <h3>Glitch Resources</h3>
         <p>
-          <a href="https://glitch.com/create" target="_blank"
-            >Start Coding!</a
-          >
+          <a href="https://glitch.com/create" target="_blank">Start Coding!</a>
         </p>
         <p>
-          <a
-            href="https://glitch.com/help/tag/getting-started/"
-            target="_blank"
+          <a href="https://glitch.com/help/tag/getting-started/" target="_blank"
             >Getting Started FAQs</a
           >
         </p>
@@ -1162,6 +1167,13 @@ function create() {
         <p>
           <a href="https://freesound.org/browse/tags/game/" target="_blank"
             >FreeSound Game Sounds</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://github.com/photonstorm/phaser-examples/tree/master/examples/assets"
+            target="_blank"
+            >Phaser Examples GitHub Repository</a
           >
         </p>
       </div>
