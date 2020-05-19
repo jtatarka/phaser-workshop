@@ -1,105 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Phaser Workshop</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.ico" />
 
-  <title>Phaser Workshop</title>
-  <link rel="icon" type="image/png" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/chicktech.css" />
 
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="css/theme/chicktech.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-  <!-- Theme used for syntax highlighting of code -->
-  <link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
 
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-    document.getElementsByTagName('head')[0].appendChild(link);
-  </script>
-</head>
-
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <section>
-        <img class="plain" src="../assets/phaser.png">
-        <h2>Video Game Design</h2>
-        <h3>using Phaser 2/CE</h3>
-      </section>
-      <section>
-        <h2>Agenda</h2>
-        <ol>
-          <p>1️⃣ Phaser Framework</p>
-          <p>2️⃣ Web Building Blocks</p>
-          <p>3️⃣ Coding Environment</p>
-          <p>4️⃣ The Basics</p>
-          <p>5️⃣ Game Design Fundamentals</p>
-        </ol>
-      </section>
-      <section>
-        <h1>Part 1️⃣</h1>
-        <h2>Phaser Framework</h2>
-      </section>
-      <section>
-        <h2>What is Phaser?</h2>
-        <q>Phaser is a fun, free and fast 2D game <em>framework</em> for making <em>HTML5</em> games
-          for desktop and mobile Web browsers, supporting Canvas and WebGL rendering.</q>
-      </section>
-      <section>
-        <h3>Ok, so what is a framework?</h3>
-        <ul>
-          <li>Toolbox used to build applications 🧰🔩🔧🔨</li>
-          <li>Someone else has already done the leg work</li>
-          <li>Bundled, extensible code already written for you</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Agenda</h2>
-        <ol>
-          <p>1️⃣ Phaser Framework ✔️</p>
-          <p>2️⃣ Web Building Blocks</p>
-          <p>3️⃣ Coding Environment</p>
-          <p>4️⃣ The Basics</p>
-          <p>5️⃣ Game Design Fundamentals</p>
-        </ol>
-      </section>
-      <section>
-        <h1>Part 2️⃣</h1>
-        <h2>Web Building Blocks</h2>
-      </section>
-      <section>
-        <h2>The Phaser framework uses the building blocks of the Web:</h2>
-      </section>
-      <section>
-        <h3>HTML 🌐</h3>
-        <p>HyperText Markup Language</p>
-        <ul class="fragment">
-          <li>Basic building block of the Web</li>
-          <li>Specifies structure and content of a Web page</li>
-          <li>Organized with elements called <em>tags</em></li>
-        </ul>
-        <pre class="fragment"><code class="hljs html" data-trim>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <img class="plain" src="../assets/phaser.png" />
+          <h2>Video Game Design</h2>
+          <h3>using Phaser 2/CE</h3>
+        </section>
+        <section>
+          <h2>Agenda</h2>
+          <ol>
+            <p>1️⃣ Phaser Framework</p>
+            <p>2️⃣ Web Building Blocks</p>
+            <p>3️⃣ Coding Environment</p>
+            <p>4️⃣ The Basics</p>
+            <p>5️⃣ Game Design Fundamentals</p>
+          </ol>
+        </section>
+        <section>
+          <h1>Part 1️⃣</h1>
+          <h2>Phaser Framework</h2>
+        </section>
+        <section>
+          <h2>What is Phaser?</h2>
+          <q
+            >Phaser is a fun, free and fast 2D game <em>framework</em> for
+            making <em>HTML5</em> games for desktop and mobile Web browsers,
+            supporting Canvas and WebGL rendering.</q
+          >
+        </section>
+        <section>
+          <h3>Ok, so what is a framework?</h3>
+          <ul>
+            <li>Toolbox used to build applications 🧰🔩🔧🔨</li>
+            <li>Someone else has already done the leg work</li>
+            <li>Bundled, extensible code already written for you</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Agenda</h2>
+          <ol>
+            <p>1️⃣ Phaser Framework ✔️</p>
+            <p>2️⃣ Web Building Blocks</p>
+            <p>3️⃣ Coding Environment</p>
+            <p>4️⃣ The Basics</p>
+            <p>5️⃣ Game Design Fundamentals</p>
+          </ol>
+        </section>
+        <section>
+          <h1>Part 2️⃣</h1>
+          <h2>Web Building Blocks</h2>
+        </section>
+        <section>
+          <h2>The Phaser framework uses the building blocks of the Web:</h2>
+        </section>
+        <section>
+          <h3>HTML 🌐</h3>
+          <p>HyperText Markup Language</p>
+          <ul class="fragment">
+            <li>Basic building block of the Web</li>
+            <li>Specifies structure and content of a Web page</li>
+            <li>Organized with elements called <em>tags</em></li>
+          </ul>
+          <pre class="fragment"><code class="hljs html" data-trim>
 				<div class="content">
 				  <p>This is a paragraph.</p>
 				  <p>This is another paragraph.</p>
 				</div>
 				</code></pre>
-      </section>
-      <section>
-        <h3>CSS 🌐</h3>
-        <p>Cascading Style Sheets</p>
-        <ul class="fragment">
-          <li>Defines how a Web page's elements look</li>
-          <li>Styles are applied using <em>selectors</em></li>
-        </ul>
-        <pre class="fragment"><code class="hljs css" data-trim>
+        </section>
+        <section>
+          <h3>CSS 🌐</h3>
+          <p>Cascading Style Sheets</p>
+          <ul class="fragment">
+            <li>Defines how a Web page's elements look</li>
+            <li>Styles are applied using <em>selectors</em></li>
+          </ul>
+          <pre class="fragment"><code class="hljs css" data-trim>
 				p {
 				  color: tomato;
 				}
@@ -108,16 +115,16 @@
 				  text-align: center;
 				}
 				</code></pre>
-      </section>
-      <section>
-        <h3>JS 🌐</h3>
-        <p>JavaScript</p>
-        <ul class="fragment">
-          <li>Scripting lanugage of the Web</li>
-          <li>Controls the behavior of Web pages</li>
-          <li>We'll write our Phaser game in JavaScript</li>
-        </ul>
-        <pre class="fragment"><code class="hljs js" data-trim>
+        </section>
+        <section>
+          <h3>JS 🌐</h3>
+          <p>JavaScript</p>
+          <ul class="fragment">
+            <li>Scripting lanugage of the Web</li>
+            <li>Controls the behavior of Web pages</li>
+            <li>We'll write our Phaser game in JavaScript</li>
+          </ul>
+          <pre class="fragment"><code class="hljs js" data-trim>
 				var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
 				  preload: preload,
 				  create: create,
@@ -128,103 +135,128 @@
 				  game.load.image('sky', '/assets/sky.png');
 				}
 				</code></pre>
-      </section>
-      <section>
-        <h1>🧐</h1>
-        <h2>Review</h2>
-      </section>
-      <section>
-        <h2>Agenda</h2>
-        <ol>
-          <p>1️⃣ Phaser Framework ✔️</p>
-          <p>2️⃣ Web Building Blocks ✔️</p>
-          <p>3️⃣ Coding Environment</p>
-          <p>4️⃣ The Basics</p>
-          <p>5️⃣ Game Design Fundamentals</p>
-        </ol>
-      </section>
-      <section>
-        <h1>Part 3️⃣</h1>
-        <h2>Coding Environment</h2>
-      </section>
-      <section>
-        <h2>Glitch</h2>
-        <p>Available at: <a href="https://glitch.com/" target="_blank">https://glitch.com</a>.</p>
-        <p>Free Web host and programming environment which updates in realtime and is great for learning.</p>
-      </section>
-      <section>
-        <h3>Remixing</h3>
-        <p>All applications on Glitch can be <em>remixed</em>.</p>
-        <ul>
-          <li>Copies an app into a personal project</li>
-          <li>Allows you to edit and improve existing code</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Alright, let's goooo! 🎉</h3>
-        <p>Remix <a href="https://phaser-workshop.glitch.me" target="_blank">phaser-workshop.glitch.me</a> to get
-          started.</p>
-      </section>
-      <section>
-        <h2>Agenda</h2>
-        <ol>
-          <p>1️⃣ Phaser Framework ✔️</p>
-          <p>2️⃣ Web Building Blocks ✔️</p>
-          <p>3️⃣ Coding Environment ✔️</p>
-          <p>4️⃣ The Basics</p>
-          <p>5️⃣ Game Design Fundamentals</p>
-        </ol>
-      </section>
-      <section>
-        <h1>Part 4️⃣</h1>
-        <h2>The Basics</h2>
-      </section>
-      <section>
-        <h2>Glitch Basics</h2>
-        <p>Open your remixed project and take a look around.</p>
-        <img class="plain" src="../assets/glitch.png">
-      </section>
-      <section>
-        <h2>HTML Basics</h2>
-        <p> 📝 Let's edit the title of our Web page in <em>index.html</em>. This file lives in the <em>views</em>
-          folder.</p>
-        <ul class="fragment">
-          <li>Which tag's content should be updated?</li>
-          <li>What happens when you make the change?</li>
-        </ul>
-      </section>
-      <section>
-        <h2>CSS Basics</h2>
-        <p>📝 Now let's change the color of the header in <em>style.css</em>. This file is located in the
-          <em>public</em>
-          folder.</p>
-        <ul class="fragment">
-          <li>The existing color is in HEX format (<em>#373fff</em>)</li>
-          <li>Browers also understand many <a href="https://www.w3schools.com/cssref/css_colors.asp"
-              target="_blank">colors by name</a>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>JS Basics</h2>
-        <p>We'll work with <em>variables</em>, <em>functions</em>, and <em>objects</em>.</p>
-        <div class="fragment">
-          <p>Variables hold data.</p>
-          <pre><code class="hljs js" data-trim>
+        </section>
+        <section>
+          <h1>🧐</h1>
+          <h2>Review</h2>
+        </section>
+        <section>
+          <h2>Agenda</h2>
+          <ol>
+            <p>1️⃣ Phaser Framework ✔️</p>
+            <p>2️⃣ Web Building Blocks ✔️</p>
+            <p>3️⃣ Coding Environment</p>
+            <p>4️⃣ The Basics</p>
+            <p>5️⃣ Game Design Fundamentals</p>
+          </ol>
+        </section>
+        <section>
+          <h1>Part 3️⃣</h1>
+          <h2>Coding Environment</h2>
+        </section>
+        <section>
+          <h2>Glitch</h2>
+          <p>
+            Available at:
+            <a href="https://glitch.com/" target="_blank">https://glitch.com</a
+            >.
+          </p>
+          <p>
+            Free Web host and programming environment which updates in realtime
+            and is great for learning.
+          </p>
+        </section>
+        <section>
+          <h3>Remixing</h3>
+          <p>All applications on Glitch can be <em>remixed</em>.</p>
+          <ul>
+            <li>Copies an app into a personal project</li>
+            <li>Allows you to edit and improve existing code</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Alright, let's goooo! 🎉</h3>
+          <p>
+            Remix
+            <a href="https://phaser-workshop.glitch.me" target="_blank"
+              >phaser-workshop.glitch.me</a
+            >
+            to get started.
+          </p>
+        </section>
+        <section>
+          <h2>Agenda</h2>
+          <ol>
+            <p>1️⃣ Phaser Framework ✔️</p>
+            <p>2️⃣ Web Building Blocks ✔️</p>
+            <p>3️⃣ Coding Environment ✔️</p>
+            <p>4️⃣ The Basics</p>
+            <p>5️⃣ Game Design Fundamentals</p>
+          </ol>
+        </section>
+        <section>
+          <h1>Part 4️⃣</h1>
+          <h2>The Basics</h2>
+        </section>
+        <section>
+          <h2>Glitch Basics</h2>
+          <p>Open your remixed project and take a look around.</p>
+          <img class="plain" src="../assets/glitch.png" />
+        </section>
+        <section>
+          <h2>HTML Basics</h2>
+          <p>
+            📝 Let's edit the title of our Web page in <em>index.html</em>. This
+            file lives in the <em>views</em> folder.
+          </p>
+          <ul class="fragment">
+            <li>Which tag's content should be updated?</li>
+            <li>What happens when you make the change?</li>
+          </ul>
+        </section>
+        <section>
+          <h2>CSS Basics</h2>
+          <p>
+            📝 Now let's change the color of the header in <em>style.css</em>.
+            This file is located in the
+            <em>public</em>
+            folder.
+          </p>
+          <ul class="fragment">
+            <li>The existing color is in HEX format (<em>#373fff</em>)</li>
+            <li>
+              Browers also understand many
+              <a
+                href="https://www.w3schools.com/cssref/css_colors.asp"
+                target="_blank"
+                >colors by name</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>JS Basics</h2>
+          <p>
+            We'll work with <em>variables</em>, <em>functions</em>, and
+            <em>objects</em>.
+          </p>
+          <div class="fragment">
+            <p>Variables hold data.</p>
+            <pre><code class="hljs js" data-trim>
             var score = 0;
           </code></pre>
-        </div>
-        <div class="fragment">
-          <p>Functions are chunks of code that do something.</p>
-          <pre><code class="hljs js" data-trim>
+          </div>
+          <div class="fragment">
+            <p>Functions are chunks of code that do something.</p>
+            <pre><code class="hljs js" data-trim>
             function preload() {
               console.log('Preloading game...');
             }
           </code></pre>
-        </div>
-        <div class="fragment">
-          <p>Objects are containers for variables and functions.</p>
-          <pre><code class="hljs js" data-trim>
+          </div>
+          <div class="fragment">
+            <p>Objects are containers for variables and functions.</p>
+            <pre><code class="hljs js" data-trim>
             var game = {
               score: 0,
               preload: function() {
@@ -232,197 +264,246 @@
               }
             };
           </code></pre>
-        </div>
-      </section>
-      <section>
-        <h1>🤔</h1>
-        <h2>Questions?</h2>
-      </section>
-      <section>
-        <h2>Agenda</h2>
-        <ol>
-          <p>1️⃣ Phaser Framework ✔️</p>
-          <p>2️⃣ Web Building Blocks ✔️</p>
-          <p>3️⃣ Coding Environment ✔️</p>
-          <p>4️⃣ The Basics ✔️</p>
-          <p>5️⃣ Game Design Fundamentals</p>
-        </ol>
-      </section>
-      <section>
-        <h1>Part 5️⃣</h1>
-        <h2>Game Design Fundamentals</h2>
-      </section>
-      <section>
-        <h2>Organization 🎮</h2>
-        <p>Games are broken up into multiple parts.</p>
-        <p>At the highest level:</p>
-        <ul>
-          <li>Assets</li>
-          <li>Code</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Assets</h3>
-        <p>Assets are media files used in your game.</p>
-        <ul>
-          <li>Designed by artists</li>
-          <li>Visual images</li>
-          <li>Music and sounds</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Code</h3>
-        <p>Writing a game requires three steps:</p>
-        <ol>
-          <li>Preload your assets</li>
-          <li>Create your world</li>
-          <li>Update on user input</li>
-        </ol>
-      </section>
-      <section>
-        <h2>Initialize It</h2>
-        <p>All Phaser games start with <code>Phaser.Game()</code>.</p>
-        <pre><code class="hljs js" data-trim>
+          </div>
+        </section>
+        <section>
+          <h1>🤔</h1>
+          <h2>Questions?</h2>
+        </section>
+        <section>
+          <h2>Agenda</h2>
+          <ol>
+            <p>1️⃣ Phaser Framework ✔️</p>
+            <p>2️⃣ Web Building Blocks ✔️</p>
+            <p>3️⃣ Coding Environment ✔️</p>
+            <p>4️⃣ The Basics ✔️</p>
+            <p>5️⃣ Game Design Fundamentals</p>
+          </ol>
+        </section>
+        <section>
+          <h1>Part 5️⃣</h1>
+          <h2>Game Design Fundamentals</h2>
+        </section>
+        <section>
+          <h2>Organization 🎮</h2>
+          <p>Games are broken up into multiple parts.</p>
+          <p>At the highest level:</p>
+          <ul>
+            <li>Assets</li>
+            <li>Code</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Assets</h3>
+          <p>Assets are media files used in your game.</p>
+          <ul>
+            <li>Designed by artists</li>
+            <li>Visual images</li>
+            <li>Music and sounds</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Code</h3>
+          <p>Writing a game requires three steps:</p>
+          <ol>
+            <li>Preload your assets</li>
+            <li>Create your world</li>
+            <li>Update on user input</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Initialize It</h2>
+          <p>All Phaser games start with <code>Phaser.Game()</code>.</p>
+          <pre><code class="hljs js" data-trim>
           var game = new Phaser.Game(800, 600, Phaser.AUTO, "", {
             preload: preload,
             create: create,
             update: update
           });
         </code></pre>
-      </section>
-      <section>
-        <div>
-          <h3>📤 Preload</h3>
-          <p>The <code>preload()</code> function is called first.</p>
-          <p>Use it to load your game assets.</p>
-        </div>
-        <div class="fragment">
-          <h3>🎨 Create</h3>
-          <p>Then <code>create()</code> is called next.</p>
-          <p>All of your assets are guaranteed to have loaded, so now you can use them in your game.</p>
-        </div>
-        <div class="fragment">
-          <h3>🔁 Update</h3>
-          <p>Finally, <code>update()</code> is called last.</p>
-          <p>It's called on a loop for the duration of our game so we can make things happen!</p>
-        </div>
-      </section>
-      <section>
-        <h2>Sprites 🎮</h2>
-        <p>Geek speak for 2D graphics used in a game.</p>
-        <div class="fragment">
-          <p>📝 Preload the game's background: <code>sky.png</code>.</p>
-          <pre><code class="hljs js" data-trim>
+        </section>
+        <section>
+          <div>
+            <h3>📤 Preload</h3>
+            <p>The <code>preload()</code> function is called first.</p>
+            <p>Use it to load your game assets.</p>
+          </div>
+          <div class="fragment">
+            <h3>🎨 Create</h3>
+            <p>Then <code>create()</code> is called next.</p>
+            <p>
+              All of your assets are guaranteed to have loaded, so now you can
+              use them in your game.
+            </p>
+          </div>
+          <div class="fragment">
+            <h3>🔁 Update</h3>
+            <p>Finally, <code>update()</code> is called last.</p>
+            <p>
+              It's called on a loop for the duration of our game so we can make
+              things happen!
+            </p>
+          </div>
+        </section>
+        <section>
+          <h2>Sprites 🎮</h2>
+          <p>Geek speak for 2D graphics used in a game.</p>
+          <div class="fragment">
+            <p>📝 Preload the game's background: <code>sky.png</code>.</p>
+            <pre><code class="hljs js" data-trim>
             game.load.image("sky", "/assets/sky.png");
           </code></pre>
-        </div>
-        <div class="fragment">
-          <p>📝 Now, add it to the world.</p>
-          <pre><code class="hljs js" data-trim>
+          </div>
+          <div class="fragment">
+            <p>📝 Now, add it to the world.</p>
+            <pre><code class="hljs js" data-trim>
             game.add.sprite(0, 0, "sky");
           </code></pre>
-        </div>
-      </section>
-      <section>
-        <h3>Spritesheets</h3>
-        <p>A sprite, but with multiple frames in one file.</p>
-        <img class="plain" src="../assets/dude.png" style="width: 45%;">
-      </section>
-      <section>
-        <h2>Physics 🎮</h2>
-        <p>Game objects have a <em>body</em>, or a set of properties which define how it moves and interacts with other
-          objects
-          in the game environment.</p>
-      </section>
-      <section>
-        <p>📝 Update the <code>ground</code>'s <code>body</code>.</p>
-        <pre><code class="hljs js" data-trim>
+          </div>
+        </section>
+        <section>
+          <h3>Spritesheets</h3>
+          <p>A sprite, but with multiple frames in one file.</p>
+          <img class="plain" src="../assets/dude.png" style="width: 45%;" />
+        </section>
+        <section>
+          <h2>Physics 🎮</h2>
+          <p>
+            Game objects have a <em>body</em>, or a set of properties which
+            define how it moves and interacts with other objects in the game
+            environment.
+          </p>
+        </section>
+        <section>
+          <p>📝 Update the <code>ground</code>'s <code>body</code>.</p>
+          <pre><code class="hljs js" data-trim>
             ground.body.immovable = true;
           </code></pre>
-        <div class="fragment">
-          <p>📝 Add <em>collision</em> to the <code>stars</code> and <code>platform</code>.</p>
-          <pre><code class="hljs js" data-trim>
-            game.physics.arcade.collide(stars, platform);
+          <div class="fragment">
+            <p>
+              📝 Add <em>collision</em> to the <code>stars</code> and
+              <code>platform</code>.
+            </p>
+            <pre><code class="hljs js" data-trim>
+            game.physics.arcade.collide(stars, platforms);
           </code></pre>
-        </div>
-      </section>
-      <section>
-        <h2>Animations 🎮</h2>
-        <p>Animations bring life to your game.</p>
-        <div class="fragment">
-          <p>📝 Add an animation for when the <code>player</code> moves to the right. 🔎 How is it different from
-            <code>"left"</code>?
-          </p>
-          <pre><code class="hljs js" data-trim>
-            player.animations.add("right", [5, 6, 7, 8], true);
+          </div>
+        </section>
+        <section>
+          <h2>Animations 🎮</h2>
+          <p>Animations bring life to your game.</p>
+          <div class="fragment">
+            <p>
+              📝 Add an animation for when the <code>player</code> moves to the
+              right. 🔎 How is it different from <code>"left"</code>?
+            </p>
+            <pre><code class="hljs js" data-trim>
+            player.animations.add("right", [5, 6, 7, 8], 10, true);
           </code></pre>
-        </div>
-        <div class="fragment">
-          <p>Now <code>play</code> the animation on user input.</p>
-          <pre><code class="hljs js" data-trim>
+          </div>
+          <div class="fragment">
+            <p>Now <code>play</code> the animation on user input.</p>
+            <pre><code class="hljs js" data-trim>
             player.animations.play("right");
           </code></pre>
-        </div>
-      </section>
-      <section>
-        <h2>Docs! 🎮</h2>
-        <p>The Phaser <em>documentation</em> will help you develop and improve your game.</p>
-        <div class="fragment">
-          <p>📝 Check out the <a href="https://phaser.io/docs/2.2.2/index" target="_blank">Phaser docs</a> for a
-            function which can be used to remove the captured <code>star</code>.</p>
-        </div>
-        <pre class="fragment"><code class="hljs js" data-trim>
+          </div>
+        </section>
+        <section>
+          <h2>Docs! 🎮</h2>
+          <p>
+            The Phaser <em>documentation</em> will help you develop and improve
+            your game.
+          </p>
+          <div class="fragment">
+            <p>
+              📝 Check out the
+              <a href="https://phaser.io/docs/2.2.2/index" target="_blank"
+                >Phaser docs</a
+              >
+              for a function which can be used to remove the captured
+              <code>star</code>.
+            </p>
+          </div>
+          <pre class="fragment"><code class="hljs js" data-trim>
           star.kill();
         </code></pre>
-      </section>
-      <section>
-        <h2>Agenda</h2>
-        <ol>
-          <p>1️⃣ Phaser Framework ✔️</p>
-          <p>2️⃣ Web Building Blocks ✔️</p>
-          <p>3️⃣ Coding Environment ✔️</p>
-          <p>4️⃣ The Basics ✔️</p>
-          <p>5️⃣ Game Design Fundamentals ✔️</p>
-        </ol>
-      </section>
-      <section>
-        <h2>Next Steps 🎊</h2>
-        <ul>
-          <p>🎆 Start over with <a href="https://jtatarka.github.io/phaser-workshop/" target="_blank">more detail</a>
-          </p>
-          <p>🎆 Get <a href="https://mozdevs.github.io/html5-games-workshop/platformer/" target="_blank">inspired</a>
-          </p>
-          <p>🎆 Check out <a href="http://phaser.io/examples/v2" target="_blank">examples</a></p>
-          <p>🎆 Enroll in a <a href="https://www.udemy.com/course/making-games-with-phaser/" target="_blank">free
-              course</a></p>
-          <p>🎆 Work through <a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser"
-              target="_blank">another tutorial</a></p>
-        </ul>
-      </section>
+        </section>
+        <section>
+          <h2>Agenda</h2>
+          <ol>
+            <p>1️⃣ Phaser Framework ✔️</p>
+            <p>2️⃣ Web Building Blocks ✔️</p>
+            <p>3️⃣ Coding Environment ✔️</p>
+            <p>4️⃣ The Basics ✔️</p>
+            <p>5️⃣ Game Design Fundamentals ✔️</p>
+          </ol>
+        </section>
+        <section>
+          <h2>Next Steps 🎊</h2>
+          <ul>
+            <p>
+              🎆 Start over with
+              <a
+                href="https://jtatarka.github.io/phaser-workshop/"
+                target="_blank"
+                >more detail</a
+              >
+            </p>
+            <p>
+              🎆 Get
+              <a
+                href="https://mozdevs.github.io/html5-games-workshop/platformer/"
+                target="_blank"
+                >inspired</a
+              >
+            </p>
+            <p>
+              🎆 Check out
+              <a href="http://phaser.io/examples/v2" target="_blank"
+                >examples</a
+              >
+            </p>
+            <p>
+              🎆 Enroll in a
+              <a
+                href="https://www.udemy.com/course/making-games-with-phaser/"
+                target="_blank"
+                >free course</a
+              >
+            </p>
+            <p>
+              🎆 Work through
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser"
+                target="_blank"
+                >another tutorial</a
+              >
+            </p>
+          </ul>
+        </section>
+      </div>
     </div>
-  </div>
 
-  <script src="js/reveal.js"></script>
+    <script src="js/reveal.js"></script>
 
-  <script>
-    // More info about config & dependencies:
-    // - https://github.com/hakimel/reveal.js#configuration
-    // - https://github.com/hakimel/reveal.js#dependencies
-    Reveal.initialize({
-      width: 975,
-      height: 850,
-      margin: 0.15,
-      hash: true,
-      transition: 'zoom',
-      transitionSpeed: 'fast',
-      dependencies: [
-        { src: 'plugin/markdown/marked.js' },
-        { src: 'plugin/markdown/markdown.js' },
-        { src: 'plugin/highlight/highlight.js', async: true },
-        { src: 'plugin/notes/notes.js', async: true }
-      ]
-    });
-  </script>
-</body>
-
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        width: 975,
+        height: 850,
+        margin: 0.15,
+        hash: true,
+        transition: "zoom",
+        transitionSpeed: "fast",
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/highlight/highlight.js", async: true },
+          { src: "plugin/notes/notes.js", async: true },
+        ],
+      });
+    </script>
+  </body>
 </html>
